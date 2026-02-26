@@ -1,0 +1,126 @@
+<!-- ═══ HERO ═══
+     Full-viewport opening statement.
+     Staggered entrance via .hero-animate + .visible (main.ts adds .visible with 180ms delays)
+     ═══════════════════════════════════════════════════════════════════ -->
+
+<div class="relative min-h-screen flex items-center overflow-hidden">
+
+  <!-- Background: layered dark gradient -->
+  <div class="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-800 to-dark-700"></div>
+
+  <!-- Subtle radial gold glow — top-right bias -->
+  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_50%,rgba(212,175,55,0.04),transparent_60%)]"></div>
+
+  <!-- Directional gradient overlay — protects text legibility -->
+  <div class="absolute inset-0 bg-gradient-to-r from-dark-900/95 via-dark-900/70 to-transparent"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-32 lg:py-0">
+    <div class="max-w-3xl">
+
+      <!-- Badge -->
+      <div class="hero-animate opacity-0 translate-y-6 mb-8 lg:mb-10">
+        <span class="inline-block px-4 py-1.5 border border-gold-400/30 text-gold-400 text-xs tracking-[0.25em] uppercase font-body">
+          Основател на Code: Abundance&trade;
+        </span>
+      </div>
+
+      <!-- Headline -->
+      <h1 class="hero-animate opacity-0 translate-y-6 font-display text-4xl sm:text-5xl lg:text-7xl xl:text-8xl font-bold leading-[1.05] mb-6 lg:mb-8">
+        Платил съм цената.<br />
+        <span class="text-gold-400">За да не се налага</span><br />
+        да я плащаш ти.
+      </h1>
+
+      <!-- Subheadline -->
+      <p class="hero-animate opacity-0 translate-y-6 font-body text-lg sm:text-xl text-white/50 mb-6 lg:mb-8 max-w-xl">
+        9+ години. 7 бизнеса. Една система, родена от реален опит &mdash; не от теория.
+      </p>
+
+      <!-- Supporting text — arrow bullets -->
+      <div class="hero-animate opacity-0 translate-y-6 mb-10 lg:mb-12 space-y-2.5 max-w-lg">
+        <p class="text-white/35 text-sm font-body leading-relaxed">
+          <span class="text-gold-400/60 mr-2">&rarr;</span>Изградил съм екип от 120+ души от нулата
+        </p>
+        <p class="text-white/35 text-sm font-body leading-relaxed">
+          <span class="text-gold-400/60 mr-2">&rarr;</span>Генерирал съм милиони в оборот преди 30-та си година
+        </p>
+        <p class="text-white/35 text-sm font-body leading-relaxed">
+          <span class="text-gold-400/60 mr-2">&rarr;</span>Стартирал съм бизнеси в 4 различни индустрии
+        </p>
+        <p class="text-white/35 text-sm font-body leading-relaxed">
+          <span class="text-gold-400/60 mr-2">&rarr;</span>Провалял съм се достатъчно, за да знам кое работи
+        </p>
+      </div>
+
+      <!-- CTAs -->
+      <div class="hero-animate opacity-0 translate-y-6 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
+
+        <!-- Primary CTA -->
+        <a href="#cta"
+           class="magnetic-btn inline-flex items-center gap-3 px-8 py-4 bg-gold-400 text-dark-900 text-sm font-bold tracking-[0.12em] uppercase rounded-sm hover:bg-gold-300 transition-colors duration-300">
+          Виж дали тази система е за теб
+          <span class="text-base leading-none">&rarr;</span>
+        </a>
+
+        <!-- Secondary link -->
+        <a href="#journey"
+           class="group inline-flex items-center gap-2 text-sm text-white/40 hover:text-white/70 transition-colors duration-300 font-body">
+          Или прочети първо историята
+          <span class="inline-block transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Social proof bar — bottom of hero -->
+  <div class="absolute bottom-0 left-0 right-0 border-t border-white/5 bg-dark-900/50 backdrop-blur-sm">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/5">
+
+        <!-- Stat 1 -->
+        <div class="py-5 lg:py-6 px-4 lg:px-6 text-center lg:text-left">
+          <div class="font-display text-2xl lg:text-3xl font-bold text-gold-400 count-up" data-target="9" data-suffix="+">
+            9+
+          </div>
+          <div class="text-[10px] tracking-[0.2em] uppercase text-white/30 mt-1 font-body">
+            Години опит
+          </div>
+        </div>
+
+        <!-- Stat 2 -->
+        <div class="py-5 lg:py-6 px-4 lg:px-6 text-center lg:text-left">
+          <div class="font-display text-2xl lg:text-3xl font-bold text-gold-400 count-up" data-target="120" data-suffix="+">
+            120+
+          </div>
+          <div class="text-[10px] tracking-[0.2em] uppercase text-white/30 mt-1 font-body">
+            Члена екип
+          </div>
+        </div>
+
+        <!-- Stat 3 -->
+        <div class="py-5 lg:py-6 px-4 lg:px-6 text-center lg:text-left">
+          <div class="font-display text-2xl lg:text-3xl font-bold text-gold-400 count-up" data-target="7" data-suffix="">
+            7
+          </div>
+          <div class="text-[10px] tracking-[0.2em] uppercase text-white/30 mt-1 font-body">
+            Бизнеса
+          </div>
+        </div>
+
+        <!-- Stat 4 -->
+        <div class="py-5 lg:py-6 px-4 lg:px-6 text-center lg:text-left">
+          <div class="font-display text-2xl lg:text-3xl font-bold text-gold-400">
+            &mdash; млн.
+          </div>
+          <div class="text-[10px] tracking-[0.2em] uppercase text-white/30 mt-1 font-body">
+            Оборот
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>

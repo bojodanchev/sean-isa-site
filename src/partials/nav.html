@@ -1,0 +1,94 @@
+<!-- ═══ NAVIGATION ═══
+     Fixed top bar: transparent → glassmorphism on scroll (via .nav-scrolled in main.ts)
+     Mobile menu: full-screen overlay toggled via #menu-toggle
+     ═══════════════════════════════════════════════════════════════════ -->
+
+<div class="max-w-7xl mx-auto px-6 lg:px-8">
+  <div class="flex items-center justify-between h-20">
+
+    <!-- Logo -->
+    <a href="#hero" class="font-display text-2xl font-bold tracking-wider text-white relative z-50">
+      SEAN ISA
+    </a>
+
+    <!-- Desktop links -->
+    <div class="hidden lg:flex items-center gap-10">
+      <a href="#journey"
+         class="text-xs tracking-[0.25em] uppercase text-white/60 hover:text-gold-400 transition-colors duration-300">
+        За мен
+      </a>
+      <a href="#journey"
+         class="text-xs tracking-[0.25em] uppercase text-white/60 hover:text-gold-400 transition-colors duration-300">
+        Пътят
+      </a>
+      <a href="#projects"
+         class="text-xs tracking-[0.25em] uppercase text-white/60 hover:text-gold-400 transition-colors duration-300">
+        Проекти
+      </a>
+      <a href="#philosophy"
+         class="text-xs tracking-[0.25em] uppercase text-white/60 hover:text-gold-400 transition-colors duration-300">
+        Философия
+      </a>
+      <a href="#footer"
+         class="text-xs tracking-[0.25em] uppercase text-white/60 hover:text-gold-400 transition-colors duration-300">
+        Контакт
+      </a>
+    </div>
+
+    <!-- Right side: CTA + Hamburger -->
+    <div class="flex items-center gap-4">
+
+      <!-- CTA button -->
+      <a href="#cta"
+         class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 bg-gold-400 text-dark-900 text-xs font-bold tracking-[0.15em] uppercase rounded-sm animate-pulse-gold hover:bg-gold-300 transition-colors duration-300">
+        Безплатна диагностика
+      </a>
+
+      <!-- Hamburger (mobile) -->
+      <button id="menu-toggle"
+              class="relative z-50 lg:hidden flex flex-col justify-center items-center w-10 h-10 gap-[5px]"
+              aria-label="Отвори менюто">
+        <span class="block w-6 h-[2px] bg-white transition-all duration-300 origin-center"></span>
+        <span class="block w-6 h-[2px] bg-white transition-all duration-300 origin-center"></span>
+        <span class="block w-6 h-[2px] bg-white transition-all duration-300 origin-center"></span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Mobile overlay menu -->
+<div id="mobile-menu"
+     class="fixed inset-0 z-40 bg-dark-900/98 opacity-0 pointer-events-none transition-opacity duration-500 lg:hidden">
+  <div class="flex flex-col items-center justify-center h-full gap-8">
+
+    <a href="#journey"
+       class="font-display text-3xl sm:text-4xl font-light text-white/80 hover:text-gold-400 transition-colors duration-300">
+      За мен
+    </a>
+    <a href="#journey"
+       class="font-display text-3xl sm:text-4xl font-light text-white/80 hover:text-gold-400 transition-colors duration-300">
+      Пътят
+    </a>
+    <a href="#projects"
+       class="font-display text-3xl sm:text-4xl font-light text-white/80 hover:text-gold-400 transition-colors duration-300">
+      Проекти
+    </a>
+    <a href="#philosophy"
+       class="font-display text-3xl sm:text-4xl font-light text-white/80 hover:text-gold-400 transition-colors duration-300">
+      Философия
+    </a>
+    <a href="#footer"
+       class="font-display text-3xl sm:text-4xl font-light text-white/80 hover:text-gold-400 transition-colors duration-300">
+      Контакт
+    </a>
+
+    <!-- Divider -->
+    <div class="w-12 h-px bg-gold-400/30 my-2"></div>
+
+    <!-- Mobile CTA -->
+    <a href="#cta"
+       class="inline-flex items-center gap-2 px-8 py-3.5 bg-gold-400 text-dark-900 text-sm font-bold tracking-[0.15em] uppercase rounded-sm hover:bg-gold-300 transition-colors duration-300">
+      Безплатна диагностика
+    </a>
+  </div>
+</div>

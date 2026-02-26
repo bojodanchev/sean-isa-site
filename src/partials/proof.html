@@ -1,0 +1,124 @@
+<!-- ═══ SOCIAL PROOF ═══
+     Stats grid with count-up animation + testimonial carousel.
+     Relies on: .reveal + .visible, .count-up observer, #testimonial-track + .testimonial-dot
+     ═══════════════════════════════════════════════════════════════════ -->
+
+<div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+  <!-- Header -->
+  <div class="text-center mb-16 lg:mb-20">
+    <span class="reveal opacity-0 translate-y-8 inline-block text-gold-400 text-[11px] tracking-[0.3em] uppercase font-body mb-4">
+      Резултатите говорят
+    </span>
+    <h2 class="reveal opacity-0 translate-y-8 font-display text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight">
+      Реални хора.<br />Реални трансформации.
+    </h2>
+  </div>
+
+  <!-- Stats Grid -->
+  <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-20">
+
+    <!-- Stat 1 — Years -->
+    <div class="reveal opacity-0 translate-y-8 text-center">
+      <div class="font-display text-5xl lg:text-6xl font-bold text-gold-400">
+        <span class="count-up" data-target="9" data-suffix="+">0</span>
+      </div>
+      <div class="text-[11px] tracking-[0.2em] uppercase text-white/30 mt-2 font-body">
+        Години опит
+      </div>
+    </div>
+
+    <!-- Stat 2 — Team -->
+    <div class="reveal opacity-0 translate-y-8 text-center">
+      <div class="font-display text-5xl lg:text-6xl font-bold text-gold-400">
+        <span class="count-up" data-target="120" data-suffix="+">0</span>
+      </div>
+      <div class="text-[11px] tracking-[0.2em] uppercase text-white/30 mt-2 font-body">
+        Члена екип изграждани
+      </div>
+    </div>
+
+    <!-- Stat 3 — Businesses -->
+    <div class="reveal opacity-0 translate-y-8 text-center">
+      <div class="font-display text-5xl lg:text-6xl font-bold text-gold-400">
+        <span class="count-up" data-target="7" data-suffix="+">0</span>
+      </div>
+      <div class="text-[11px] tracking-[0.2em] uppercase text-white/30 mt-2 font-body">
+        Бизнеса създадени
+      </div>
+    </div>
+
+    <!-- Stat 4 — Revenue -->
+    <div class="reveal opacity-0 translate-y-8 text-center">
+      <div class="font-display text-5xl lg:text-6xl font-bold text-white/50">
+        &mdash;
+      </div>
+      <div class="text-[11px] tracking-[0.2em] uppercase text-white/30 mt-2 font-body">
+        Млн. оборот генериран
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Testimonial Carousel -->
+  <div class="relative max-w-3xl mx-auto">
+
+    <div id="testimonial-carousel" class="overflow-hidden">
+      <div id="testimonial-track" class="flex transition-transform duration-500">
+
+        <!-- Slide 1 — Student -->
+        <div class="w-full flex-shrink-0 text-center px-8">
+          <p class="font-display text-xl lg:text-2xl text-white/60 italic leading-relaxed">
+            &ldquo;Преди Code: Abundance блуждаех без посока. След 3 месеца работа със Шон имах ясен план, екип и първите си резултати. Това не е поредният курс &mdash; това е система, която работи.&rdquo;
+          </p>
+          <p class="text-gold-400/70 text-sm tracking-wider uppercase mt-6 font-body">
+            &mdash; Д.К., участник в програмата
+          </p>
+        </div>
+
+        <!-- Slide 2 — Business Client -->
+        <div class="w-full flex-shrink-0 text-center px-8">
+          <p class="font-display text-xl lg:text-2xl text-white/60 italic leading-relaxed">
+            &ldquo;Шон не ти казва какво искаш да чуеш. Казва ти какво трябва да направиш. И после ти помага да го направиш. Резултатът? Бизнесът ми расте с темп, който не мислех за възможен.&rdquo;
+          </p>
+          <p class="text-gold-400/70 text-sm tracking-wider uppercase mt-6 font-body">
+            &mdash; А.М., бизнес клиент
+          </p>
+        </div>
+
+        <!-- Slide 3 — Creator Partner -->
+        <div class="w-full flex-shrink-0 text-center px-8">
+          <p class="font-display text-xl lg:text-2xl text-white/60 italic leading-relaxed">
+            &ldquo;Партньорството със Шон промени начина, по който мисля за скалиране. Не повече, а по-умно. Не по-бързо, а по-устойчиво. Философията е различна &mdash; и точно затова работи.&rdquo;
+          </p>
+          <p class="text-gold-400/70 text-sm tracking-wider uppercase mt-6 font-body">
+            &mdash; И.С., креативен партньор
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Dots -->
+    <div class="flex justify-center gap-2.5 mt-8">
+      <button class="testimonial-dot w-2.5 h-2.5 rounded-full bg-gold-400 transition-colors duration-300" data-index="0" aria-label="Отзив 1"></button>
+      <button class="testimonial-dot w-2.5 h-2.5 rounded-full bg-white/15 transition-colors duration-300" data-index="1" aria-label="Отзив 2"></button>
+      <button class="testimonial-dot w-2.5 h-2.5 rounded-full bg-white/15 transition-colors duration-300" data-index="2" aria-label="Отзив 3"></button>
+    </div>
+
+  </div>
+
+  <!-- Media Bar -->
+  <div class="mt-16 text-center">
+    <span class="text-white/15 text-[11px] tracking-[0.3em] uppercase font-body">
+      Както се говори в:
+    </span>
+    <div class="flex gap-10 justify-center items-center mt-4 opacity-15">
+      <span class="text-white text-sm font-body tracking-wider">[Лого 1]</span>
+      <span class="text-white text-sm font-body tracking-wider">[Лого 2]</span>
+      <span class="text-white text-sm font-body tracking-wider">[Лого 3]</span>
+      <span class="text-white text-sm font-body tracking-wider">[Лого 4]</span>
+    </div>
+  </div>
+
+</div>

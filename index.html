@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sean Isa | Основател на Code: Abundance™</title>
+  <meta name="description" content="Не съм теоретик. Съм предприемач, който е платил цената — за да не се налага да я плащаш ти. 9+ години. 7 бизнеса. Една система за трансформация." />
+  <meta name="keywords" content="Sean Isa, Code Abundance, личностно развитие, предприемачество, бизнес системи, Human Design" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sean Isa | Основател на Code: Abundance™" />
+  <meta property="og:description" content="Не съм теоретик. Съм предприемач, който е платил цената." />
+  <meta property="og:image" content="/og-image.jpg" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sean Isa | Основател на Code: Abundance™" />
+  <meta name="twitter:description" content="Не съм теоретик. Съм предприемач, който е платил цената." />
+  <meta name="twitter:image" content="/og-image.jpg" />
+
+  <!-- Fonts: Cormorant Garamond (editorial display) + Outfit (geometric body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sean Isa",
+    "jobTitle": "Основател на Code: Abundance™",
+    "description": "Предприемач и ментор с 9+ години опит в бизнеса и личностното развитие",
+    "url": "https://seanisa.com",
+    "sameAs": [],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Code: Abundance™"
+    }
+  }
+  </script>
+</head>
+<body class="bg-dark-900 text-white font-body antialiased">
+  <!-- Scroll progress bar -->
+  <div id="progress-bar" class="fixed top-0 left-0 h-[2px] bg-gold-400 z-[100]" style="width: 0%"></div>
+
+  <!-- ═══ NAVIGATION ═══ -->
+  <nav id="nav" class="fixed top-0 left-0 w-full z-50 transition-all duration-500">
+    <!-- ═══ NAVIGATION ═══
+     Fixed top bar: transparent → glassmorphism on scroll (via .nav-scrolled in main.ts)
+     Mobile menu: full-screen overlay toggled via #menu-toggle
+     ═══════════════════════════════════════════════════════════════════ -->
+
+<div class="max-w-7xl mx-auto px-6 lg:px-8">
+  <div class="flex items-center justify-between h-20">
+
+    <!-- Logo -->
+    <a href="#hero" class="font-display text-2xl font-bold tracking-wider text-white relative z-50">
+      SEAN ISA
+    </a>
+
+    <!-- Desktop links -->
+    <div class="hidden lg:flex items-center gap-10">
+      <a href="#journey"
+         class="text-xs tracking-[0.25em] uppercase text-white/60 hover:text-gold-400 transition-colors duration-300">
+        За мен
+      </a>
+      <a href="#journey"
+         class="text-xs tracking-[0.25em] uppercase text-white/60 hover:text-gold-400 transition-colors duration-300">
+        Пътят
+      </a>
+      <a href="#projects"
+         class="text-xs tracking-[0.25em] uppercase text-white/60 hover:text-gold-400 transition-colors duration-300">
+        Проекти
+      </a>
+      <a href="#philosophy"
+         class="text-xs tracking-[0.25em] uppercase text-white/60 hover:text-gold-400 transition-colors duration-300">
+        Философия
+      </a>
+      <a href="#footer"
+         class="text-xs tracking-[0.25em] uppercase text-white/60 hover:text-gold-400 transition-colors duration-300">
+        Контакт
+      </a>
+    </div>
+
+    <!-- Right side: CTA + Hamburger -->
+    <div class="flex items-center gap-4">
+
+      <!-- CTA button -->
+      <a href="#cta"
+         class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 bg-gold-400 text-dark-900 text-xs font-bold tracking-[0.15em] uppercase rounded-sm animate-pulse-gold hover:bg-gold-300 transition-colors duration-300">
+        Безплатна диагностика
+      </a>
+
+      <!-- Hamburger (mobile) -->
+      <button id="menu-toggle"
+              class="relative z-50 lg:hidden flex flex-col justify-center items-center w-10 h-10 gap-[5px]"
+              aria-label="Отвори менюто">
+        <span class="block w-6 h-[2px] bg-white transition-all duration-300 origin-center"></span>
+        <span class="block w-6 h-[2px] bg-white transition-all duration-300 origin-center"></span>
+        <span class="block w-6 h-[2px] bg-white transition-all duration-300 origin-center"></span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Mobile overlay menu -->
+<div id="mobile-menu"
+     class="fixed inset-0 z-40 bg-dark-900/98 opacity-0 pointer-events-none transition-opacity duration-500 lg:hidden">
+  <div class="flex flex-col items-center justify-center h-full gap-8">
+
+    <a href="#journey"
+       class="font-display text-3xl sm:text-4xl font-light text-white/80 hover:text-gold-400 transition-colors duration-300">
+      За мен
+    </a>
+    <a href="#journey"
+       class="font-display text-3xl sm:text-4xl font-light text-white/80 hover:text-gold-400 transition-colors duration-300">
+      Пътят
+    </a>
+    <a href="#projects"
+       class="font-display text-3xl sm:text-4xl font-light text-white/80 hover:text-gold-400 transition-colors duration-300">
+      Проекти
+    </a>
+    <a href="#philosophy"
+       class="font-display text-3xl sm:text-4xl font-light text-white/80 hover:text-gold-400 transition-colors duration-300">
+      Философия
+    </a>
+    <a href="#footer"
+       class="font-display text-3xl sm:text-4xl font-light text-white/80 hover:text-gold-400 transition-colors duration-300">
+      Контакт
+    </a>
+
+    <!-- Divider -->
+    <div class="w-12 h-px bg-gold-400/30 my-2"></div>
+
+    <!-- Mobile CTA -->
+    <a href="#cta"
+       class="inline-flex items-center gap-2 px-8 py-3.5 bg-gold-400 text-dark-900 text-sm font-bold tracking-[0.15em] uppercase rounded-sm hover:bg-gold-300 transition-colors duration-300">
+      Безплатна диагностика
+    </a>
+  </div>
+</div>
+  </nav>
+
+  <main>
+    <!-- ═══ HERO ═══ -->
+    <section id="hero">
+      <!-- ═══ HERO ═══
+     Full-viewport opening statement.
+     Staggered entrance via .hero-animate + .visible (main.ts adds .visible with 180ms delays)
+     ═══════════════════════════════════════════════════════════════════ -->
+
+<div class="relative min-h-screen flex items-center overflow-hidden">
+
+  <!-- Background: layered dark gradient -->
+  <div class="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-800 to-dark-700"></div>
+
+  <!-- Subtle radial gold glow — top-right bias -->
+  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_50%,rgba(212,175,55,0.04),transparent_60%)]"></div>
+
+  <!-- Directional gradient overlay — protects text legibility -->
+  <div class="absolute inset-0 bg-gradient-to-r from-dark-900/95 via-dark-900/70 to-transparent"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-32 lg:py-0">
+    <div class="max-w-3xl">
+
+      <!-- Badge -->
+      <div class="hero-animate opacity-0 translate-y-6 mb-8 lg:mb-10">
+        <span class="inline-block px-4 py-1.5 border border-gold-400/30 text-gold-400 text-xs tracking-[0.25em] uppercase font-body">
+          Основател на Code: Abundance&trade;
+        </span>
+      </div>
+
+      <!-- Headline -->
+      <h1 class="hero-animate opacity-0 translate-y-6 font-display text-4xl sm:text-5xl lg:text-7xl xl:text-8xl font-bold leading-[1.05] mb-6 lg:mb-8">
+        Платил съм цената.<br />
+        <span class="text-gold-400">За да не се налага</span><br />
+        да я плащаш ти.
+      </h1>
+
+      <!-- Subheadline -->
+      <p class="hero-animate opacity-0 translate-y-6 font-body text-lg sm:text-xl text-white/50 mb-6 lg:mb-8 max-w-xl">
+        9+ години. 7 бизнеса. Една система, родена от реален опит &mdash; не от теория.
+      </p>
+
+      <!-- Supporting text — arrow bullets -->
+      <div class="hero-animate opacity-0 translate-y-6 mb-10 lg:mb-12 space-y-2.5 max-w-lg">
+        <p class="text-white/35 text-sm font-body leading-relaxed">
+          <span class="text-gold-400/60 mr-2">&rarr;</span>Изградил съм екип от 120+ души от нулата
+        </p>
+        <p class="text-white/35 text-sm font-body leading-relaxed">
+          <span class="text-gold-400/60 mr-2">&rarr;</span>Генерирал съм милиони в оборот преди 30-та си година
+        </p>
+        <p class="text-white/35 text-sm font-body leading-relaxed">
+          <span class="text-gold-400/60 mr-2">&rarr;</span>Стартирал съм бизнеси в 4 различни индустрии
+        </p>
+        <p class="text-white/35 text-sm font-body leading-relaxed">
+          <span class="text-gold-400/60 mr-2">&rarr;</span>Провалял съм се достатъчно, за да знам кое работи
+        </p>
+      </div>
+
+      <!-- CTAs -->
+      <div class="hero-animate opacity-0 translate-y-6 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
+
+        <!-- Primary CTA -->
+        <a href="#cta"
+           class="magnetic-btn inline-flex items-center gap-3 px-8 py-4 bg-gold-400 text-dark-900 text-sm font-bold tracking-[0.12em] uppercase rounded-sm hover:bg-gold-300 transition-colors duration-300">
+          Виж дали тази система е за теб
+          <span class="text-base leading-none">&rarr;</span>
+        </a>
+
+        <!-- Secondary link -->
+        <a href="#journey"
+           class="group inline-flex items-center gap-2 text-sm text-white/40 hover:text-white/70 transition-colors duration-300 font-body">
+          Или прочети първо историята
+          <span class="inline-block transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Social proof bar — bottom of hero -->
+  <div class="absolute bottom-0 left-0 right-0 border-t border-white/5 bg-dark-900/50 backdrop-blur-sm">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/5">
+
+        <!-- Stat 1 -->
+        <div class="py-5 lg:py-6 px-4 lg:px-6 text-center lg:text-left">
+          <div class="font-display text-2xl lg:text-3xl font-bold text-gold-400 count-up" data-target="9" data-suffix="+">
+            9+
+          </div>
+          <div class="text-[10px] tracking-[0.2em] uppercase text-white/30 mt-1 font-body">
+            Години опит
+          </div>
+        </div>
+
+        <!-- Stat 2 -->
+        <div class="py-5 lg:py-6 px-4 lg:px-6 text-center lg:text-left">
+          <div class="font-display text-2xl lg:text-3xl font-bold text-gold-400 count-up" data-target="120" data-suffix="+">
+            120+
+          </div>
+          <div class="text-[10px] tracking-[0.2em] uppercase text-white/30 mt-1 font-body">
+            Члена екип
+          </div>
+        </div>
+
+        <!-- Stat 3 -->
+        <div class="py-5 lg:py-6 px-4 lg:px-6 text-center lg:text-left">
+          <div class="font-display text-2xl lg:text-3xl font-bold text-gold-400 count-up" data-target="7" data-suffix="">
+            7
+          </div>
+          <div class="text-[10px] tracking-[0.2em] uppercase text-white/30 mt-1 font-body">
+            Бизнеса
+          </div>
+        </div>
+
+        <!-- Stat 4 -->
+        <div class="py-5 lg:py-6 px-4 lg:px-6 text-center lg:text-left">
+          <div class="font-display text-2xl lg:text-3xl font-bold text-gold-400">
+            &mdash; млн.
+          </div>
+          <div class="text-[10px] tracking-[0.2em] uppercase text-white/30 mt-1 font-body">
+            Оборот
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+    </section>
+
+    <!-- ═══ JOURNEY / TIMELINE ═══ -->
+    <section id="journey">
+      <!-- ═══ JOURNEY / TIMELINE ═══
+     Interactive vertical timeline — 12 milestones from Sean Isa's life.
+     Alternates left/right on lg+, stacks left-aligned on mobile.
+     Each item has a collapsible "lesson" via .lesson-toggle / .lesson-content.
+     IntersectionObserver in main.ts adds .visible to .timeline-item on scroll.
+     ═══════════════════════════════════════════════════════════════════════ -->
+
+<div class="py-24 lg:py-32">
+
+  <!-- Section header -->
+  <div class="max-w-5xl mx-auto px-6 lg:px-8 text-center mb-20 lg:mb-28">
+
+    <!-- Label -->
+    <p class="text-gold-400 text-xs tracking-[0.3em] uppercase font-body mb-5">
+      От хаоса към системата
+    </p>
+
+    <!-- Headline -->
+    <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] mb-6">
+      Всяка голяма трансформация<br class="hidden sm:block" />
+      започва с разпад
+    </h2>
+
+    <!-- Intro paragraph -->
+    <p class="max-w-2xl mx-auto text-white/40 text-base lg:text-lg leading-relaxed font-body">
+      Роден в разделено семейство &mdash; българска майка, нигерийски баща.
+      Израснал между два свята, без пътна карта, без мрежа за безопасност.
+      Това, което следва, не е филтрирана версия на живота &mdash;
+      това е суровата хронология на провали, пробиви и уроците между тях.
+    </p>
+  </div>
+
+  <!-- Timeline container -->
+  <div class="max-w-5xl mx-auto px-6 lg:px-8 relative">
+
+    <!-- Vertical line -->
+    <div class="absolute left-6 lg:left-1/2 top-0 bottom-0 w-px bg-white/10"></div>
+
+    <!-- ─── Item 1 · LEFT ─── -->
+    <div class="timeline-item opacity-0 translate-y-8 relative pl-16 lg:pl-0 lg:w-1/2 lg:pr-12 mb-16">
+      <!-- Dot -->
+      <div class="absolute left-4 lg:left-auto lg:right-[-8px] top-1 w-3.5 h-3.5 rounded-full border-2 border-gold-400/50 bg-dark-900 z-10"></div>
+      <!-- Content -->
+      <span class="text-gold-400/70 text-[11px] tracking-[0.2em] uppercase font-bold font-body">Година: 5&ndash;15</span>
+      <h3 class="font-display text-xl lg:text-2xl font-bold mt-1.5">Спортът като фундамент</h3>
+      <p class="text-white/40 text-sm mt-2 leading-relaxed font-body">
+        Лека атлетика под менторството на треньорка в кръга на Христо Марков.
+        Пет години състезания, медали, дисциплина.
+      </p>
+      <button class="lesson-toggle text-gold-400/50 hover:text-gold-400 text-xs tracking-wider uppercase mt-3 transition-colors duration-300 cursor-pointer font-body">Научен урок &darr;</button>
+      <div class="lesson-content max-h-0 overflow-hidden transition-all duration-300">
+        <p class="text-white/25 text-sm mt-2 italic border-l-2 border-gold-400/15 pl-3 font-body">
+          Дисциплината е свобода. Концентрацията е суперсила.
+        </p>
+      </div>
+    </div>
+
+    <!-- ─── Item 2 · RIGHT ─── -->
+    <div class="timeline-item opacity-0 translate-y-8 relative pl-16 lg:pl-12 lg:w-1/2 lg:ml-auto mb-16">
+      <!-- Dot -->
+      <div class="absolute left-4 lg:left-[-8px] top-1 w-3.5 h-3.5 rounded-full border-2 border-gold-400/50 bg-dark-900 z-10"></div>
+      <!-- Content -->
+      <span class="text-gold-400/70 text-[11px] tracking-[0.2em] uppercase font-bold font-body">Година: 10</span>
+      <h3 class="font-display text-xl lg:text-2xl font-bold mt-1.5">Пробуждането</h3>
+      <p class="text-white/40 text-sm mt-2 leading-relaxed font-body">
+        YouTube. &ldquo;The Secret&rdquo;. Наполеон Хил. Кийосаки. Карнеги.
+        На 10 години откривам личностното развитие и финансовата свобода.
+      </p>
+      <button class="lesson-toggle text-gold-400/50 hover:text-gold-400 text-xs tracking-wider uppercase mt-3 transition-colors duration-300 cursor-pointer font-body">Научен урок &darr;</button>
+      <div class="lesson-content max-h-0 overflow-hidden transition-all duration-300">
+        <p class="text-white/25 text-sm mt-2 italic border-l-2 border-gold-400/15 pl-3 font-body">
+          Ако не контролираш ума си, някой друг ще го направи.
+        </p>
+      </div>
+    </div>
+
+    <!-- ─── Item 3 · LEFT ─── -->
+    <div class="timeline-item opacity-0 translate-y-8 relative pl-16 lg:pl-0 lg:w-1/2 lg:pr-12 mb-16">
+      <!-- Dot -->
+      <div class="absolute left-4 lg:left-auto lg:right-[-8px] top-1 w-3.5 h-3.5 rounded-full border-2 border-gold-400/50 bg-dark-900 z-10"></div>
+      <!-- Content -->
+      <span class="text-gold-400/70 text-[11px] tracking-[0.2em] uppercase font-bold font-body">Година: Тийн години</span>
+      <h3 class="font-display text-xl lg:text-2xl font-bold mt-1.5">Първият Hustle</h3>
+      <p class="text-white/40 text-sm mt-2 leading-relaxed font-body">
+        Продавам собственото си колело, за да стартирам първия бизнес.
+        Купувам и препродавам стоки онлайн.
+      </p>
+      <button class="lesson-toggle text-gold-400/50 hover:text-gold-400 text-xs tracking-wider uppercase mt-3 transition-colors duration-300 cursor-pointer font-body">Научен урок &darr;</button>
+      <div class="lesson-content max-h-0 overflow-hidden transition-all duration-300">
+        <p class="text-white/25 text-sm mt-2 italic border-l-2 border-gold-400/15 pl-3 font-body">
+          Амбиция + Действие = Резултат. Теорията без действие е хоби.
+        </p>
+      </div>
+    </div>
+
+    <!-- ─── Item 4 · RIGHT ─── -->
+    <div class="timeline-item opacity-0 translate-y-8 relative pl-16 lg:pl-12 lg:w-1/2 lg:ml-auto mb-16">
+      <!-- Dot -->
+      <div class="absolute left-4 lg:left-[-8px] top-1 w-3.5 h-3.5 rounded-full border-2 border-gold-400/50 bg-dark-900 z-10"></div>
+      <!-- Content -->
+      <span class="text-gold-400/70 text-[11px] tracking-[0.2em] uppercase font-bold font-body">Година: Следващите години</span>
+      <h3 class="font-display text-xl lg:text-2xl font-bold mt-1.5">Улицата като университет</h3>
+      <p class="text-white/40 text-sm mt-2 leading-relaxed font-body">
+        Предизвикателство: 10&nbsp;000 продажби на непознати. Моловете и улиците
+        на София &mdash; школа по психология и въздействие.
+      </p>
+      <button class="lesson-toggle text-gold-400/50 hover:text-gold-400 text-xs tracking-wider uppercase mt-3 transition-colors duration-300 cursor-pointer font-body">Научен урок &darr;</button>
+      <div class="lesson-content max-h-0 overflow-hidden transition-all duration-300">
+        <p class="text-white/25 text-sm mt-2 italic border-l-2 border-gold-400/15 pl-3 font-body">
+          Страхът от отхвърляне е най-скъпият данък, който плащаш.
+        </p>
+      </div>
+    </div>
+
+    <!-- ─── Item 5 · LEFT ─── -->
+    <div class="timeline-item opacity-0 translate-y-8 relative pl-16 lg:pl-0 lg:w-1/2 lg:pr-12 mb-16">
+      <!-- Dot -->
+      <div class="absolute left-4 lg:left-auto lg:right-[-8px] top-1 w-3.5 h-3.5 rounded-full border-2 border-gold-400/50 bg-dark-900 z-10"></div>
+      <!-- Content -->
+      <span class="text-gold-400/70 text-[11px] tracking-[0.2em] uppercase font-bold font-body">Година: Младост</span>
+      <h3 class="font-display text-xl lg:text-2xl font-bold mt-1.5">Мащаб и лидерство</h3>
+      <p class="text-white/40 text-sm mt-2 leading-relaxed font-body">
+        Над 100-членен екип в компании за директни продажби. Козметика,
+        добавки, търговски мрежи.
+      </p>
+      <button class="lesson-toggle text-gold-400/50 hover:text-gold-400 text-xs tracking-wider uppercase mt-3 transition-colors duration-300 cursor-pointer font-body">Научен урок &darr;</button>
+      <div class="lesson-content max-h-0 overflow-hidden transition-all duration-300">
+        <p class="text-white/25 text-sm mt-2 italic border-l-2 border-gold-400/15 pl-3 font-body">
+          Системите мащабират. Хората изпълняват. Лидерството насочва.
+        </p>
+      </div>
+    </div>
+
+    <!-- ─── Item 6 · RIGHT ─── -->
+    <div class="timeline-item opacity-0 translate-y-8 relative pl-16 lg:pl-12 lg:w-1/2 lg:ml-auto mb-16">
+      <!-- Dot -->
+      <div class="absolute left-4 lg:left-[-8px] top-1 w-3.5 h-3.5 rounded-full border-2 border-gold-400/50 bg-dark-900 z-10"></div>
+      <!-- Content -->
+      <span class="text-gold-400/70 text-[11px] tracking-[0.2em] uppercase font-bold font-body">Година: 2019</span>
+      <h3 class="font-display text-xl lg:text-2xl font-bold mt-1.5">Национален отбор &mdash; исторически обрат</h3>
+      <p class="text-white/40 text-sm mt-2 leading-relaxed font-body">
+        От новак на пързалката до професионален хокеист за България. Златен
+        медал срещу Израел. &ldquo;Best Player of the Game&rdquo;. Първо злато
+        за националния отбор в дивизията.
+      </p>
+      <button class="lesson-toggle text-gold-400/50 hover:text-gold-400 text-xs tracking-wider uppercase mt-3 transition-colors duration-300 cursor-pointer font-body">Научен урок &darr;</button>
+      <div class="lesson-content max-h-0 overflow-hidden transition-all duration-300">
+        <p class="text-white/25 text-sm mt-2 italic border-l-2 border-gold-400/15 pl-3 font-body">
+          Войнският манталитет побеждава таланта, когато талантът не работи.
+        </p>
+      </div>
+    </div>
+
+    <!-- ─── Item 7 · LEFT ─── -->
+    <div class="timeline-item opacity-0 translate-y-8 relative pl-16 lg:pl-0 lg:w-1/2 lg:pr-12 mb-16">
+      <!-- Dot -->
+      <div class="absolute left-4 lg:left-auto lg:right-[-8px] top-1 w-3.5 h-3.5 rounded-full border-2 border-gold-400/50 bg-dark-900 z-10"></div>
+      <!-- Content -->
+      <span class="text-gold-400/70 text-[11px] tracking-[0.2em] uppercase font-bold font-body">Година: Крипто ерата</span>
+      <h3 class="font-display text-xl lg:text-2xl font-bold mt-1.5">Бързи пари, бързи загуби</h3>
+      <p class="text-white/40 text-sm mt-2 leading-relaxed font-body">
+        Печалби: Спортни коли, луксозен живот в Дубай. Загуби: Некачествени
+        инвестиции, PR атаки, негативна кампания.
+      </p>
+      <button class="lesson-toggle text-gold-400/50 hover:text-gold-400 text-xs tracking-wider uppercase mt-3 transition-colors duration-300 cursor-pointer font-body">Научен урок &darr;</button>
+      <div class="lesson-content max-h-0 overflow-hidden transition-all duration-300">
+        <p class="text-white/25 text-sm mt-2 italic border-l-2 border-gold-400/15 pl-3 font-body">
+          Парите без система са временни. Репутацията без ценности е крехка.
+        </p>
+      </div>
+    </div>
+
+    <!-- ─── Item 8 · RIGHT ─── -->
+    <div class="timeline-item opacity-0 translate-y-8 relative pl-16 lg:pl-12 lg:w-1/2 lg:ml-auto mb-16">
+      <!-- Dot -->
+      <div class="absolute left-4 lg:left-[-8px] top-1 w-3.5 h-3.5 rounded-full border-2 border-gold-400/50 bg-dark-900 z-10"></div>
+      <!-- Content -->
+      <span class="text-gold-400/70 text-[11px] tracking-[0.2em] uppercase font-bold font-body">Година: CBD бизнес</span>
+      <h3 class="font-display text-xl lg:text-2xl font-bold mt-1.5">Международен обхват, пазарен урок</h3>
+      <p class="text-white/40 text-sm mt-2 leading-relaxed font-body">
+        Бизнес в 8 държави. Инфлуенсъри, яхти, луксозни събития. Продуктът
+        беше добър. Пазарът &mdash; недооценен. Минус шестцифрени суми. Задължения.
+      </p>
+      <button class="lesson-toggle text-gold-400/50 hover:text-gold-400 text-xs tracking-wider uppercase mt-3 transition-colors duration-300 cursor-pointer font-body">Научен урок &darr;</button>
+      <div class="lesson-content max-h-0 overflow-hidden transition-all duration-300">
+        <p class="text-white/25 text-sm mt-2 italic border-l-2 border-gold-400/15 pl-3 font-body">
+          Не всичко, което блести, е бизнес. Продуктът &ne; пазар.
+        </p>
+      </div>
+    </div>
+
+    <!-- ─── Item 9 · LEFT ─── -->
+    <div class="timeline-item opacity-0 translate-y-8 relative pl-16 lg:pl-0 lg:w-1/2 lg:pr-12 mb-16">
+      <!-- Dot -->
+      <div class="absolute left-4 lg:left-auto lg:right-[-8px] top-1 w-3.5 h-3.5 rounded-full border-2 border-gold-400/50 bg-dark-900 z-10"></div>
+      <!-- Content -->
+      <span class="text-gold-400/70 text-[11px] tracking-[0.2em] uppercase font-bold font-body">Година: Тъмният период</span>
+      <h3 class="font-display text-xl lg:text-2xl font-bold mt-1.5">От дъното</h3>
+      <p class="text-white/40 text-sm mt-2 leading-relaxed font-body">
+        Работа във фабрики. Такси шофьор. Брокер на имоти. Тежки години.
+        Самота. Преосмисляне.
+      </p>
+      <button class="lesson-toggle text-gold-400/50 hover:text-gold-400 text-xs tracking-wider uppercase mt-3 transition-colors duration-300 cursor-pointer font-body">Научен урок &darr;</button>
+      <div class="lesson-content max-h-0 overflow-hidden transition-all duration-300">
+        <p class="text-white/25 text-sm mt-2 italic border-l-2 border-gold-400/15 pl-3 font-body">
+          Дъното не те убива. Те кове. Там се ражда истинският характер.
+        </p>
+      </div>
+    </div>
+
+    <!-- ─── Item 10 · RIGHT ─── -->
+    <div class="timeline-item opacity-0 translate-y-8 relative pl-16 lg:pl-12 lg:w-1/2 lg:ml-auto mb-16">
+      <!-- Dot -->
+      <div class="absolute left-4 lg:left-[-8px] top-1 w-3.5 h-3.5 rounded-full border-2 border-gold-400/50 bg-dark-900 z-10"></div>
+      <!-- Content -->
+      <span class="text-gold-400/70 text-[11px] tracking-[0.2em] uppercase font-bold font-body">Година: Норвегия</span>
+      <h3 class="font-display text-xl lg:text-2xl font-bold mt-1.5">Изгнанието като школа</h3>
+      <p class="text-white/40 text-sm mt-2 leading-relaxed font-body">
+        Доброволна изолация. Месеци без приятелства, романтика, семейство.
+        Четене. Медитация. Нов вътрешен фундамент.
+      </p>
+      <button class="lesson-toggle text-gold-400/50 hover:text-gold-400 text-xs tracking-wider uppercase mt-3 transition-colors duration-300 cursor-pointer font-body">Научен урок &darr;</button>
+      <div class="lesson-content max-h-0 overflow-hidden transition-all duration-300">
+        <p class="text-white/25 text-sm mt-2 italic border-l-2 border-gold-400/15 pl-3 font-body">
+          Понякога трябва да изчезнеш, за да се появиш отново.
+        </p>
+      </div>
+    </div>
+
+    <!-- ─── Item 11 · LEFT ─── -->
+    <div class="timeline-item opacity-0 translate-y-8 relative pl-16 lg:pl-0 lg:w-1/2 lg:pr-12 mb-16">
+      <!-- Dot -->
+      <div class="absolute left-4 lg:left-auto lg:right-[-8px] top-1 w-3.5 h-3.5 rounded-full border-2 border-gold-400/50 bg-dark-900 z-10"></div>
+      <!-- Content -->
+      <span class="text-gold-400/70 text-[11px] tracking-[0.2em] uppercase font-bold font-body">Година: Завръщането</span>
+      <h3 class="font-display text-xl lg:text-2xl font-bold mt-1.5">Дигитално възраждане</h3>
+      <p class="text-white/40 text-sm mt-2 leading-relaxed font-body">
+        Маркетинг умения. Клиенти по целия свят. Нови структури. Възстановена
+        репутация. Нова финансова основа.
+      </p>
+      <button class="lesson-toggle text-gold-400/50 hover:text-gold-400 text-xs tracking-wider uppercase mt-3 transition-colors duration-300 cursor-pointer font-body">Научен урок &darr;</button>
+      <div class="lesson-content max-h-0 overflow-hidden transition-all duration-300">
+        <p class="text-white/25 text-sm mt-2 italic border-l-2 border-gold-400/15 pl-3 font-body">
+          Уменията остават. Можеш да започнеш отново &mdash; по-мъдър.
+        </p>
+      </div>
+    </div>
+
+    <!-- ─── Item 12 · RIGHT · SPECIAL (gold-tinted) ─── -->
+    <div class="timeline-item opacity-0 translate-y-8 relative pl-16 lg:pl-12 lg:w-1/2 lg:ml-auto mb-16">
+      <!-- Dot — gold-tinted with ring -->
+      <div class="absolute left-4 lg:left-[-8px] top-1 w-3.5 h-3.5 rounded-full border-2 border-gold-400 bg-gold-400/20 ring-4 ring-gold-400/10 z-10"></div>
+      <!-- Content -->
+      <span class="text-gold-400/70 text-[11px] tracking-[0.2em] uppercase font-bold font-body">Година: Днес</span>
+      <h3 class="font-display text-xl lg:text-2xl font-bold mt-1.5 text-gold-400">CODE: ABUNDANCE&trade; &mdash; Системата</h3>
+      <p class="text-white/40 text-sm mt-2 leading-relaxed font-body">
+        Собствена философия за успех, лидерство и растеж. Общност. Обучения в
+        бизнес, финанси, личен бранд. Най-силният период. Мисия за глобално
+        наследство.
+      </p>
+      <button class="lesson-toggle text-gold-400/50 hover:text-gold-400 text-xs tracking-wider uppercase mt-3 transition-colors duration-300 cursor-pointer font-body">Научен урок &darr;</button>
+      <div class="lesson-content max-h-0 overflow-hidden transition-all duration-300">
+        <p class="text-white/25 text-sm mt-2 italic border-l-2 border-gold-400/15 pl-3 font-body">
+          Цялото ти минало е подготовка за момента, който идва.
+        </p>
+      </div>
+    </div>
+
+  </div><!-- /timeline container -->
+
+  <!-- Closing statement -->
+  <div class="max-w-3xl mx-auto px-6 lg:px-8 text-center mt-20">
+    <p class="font-display text-lg lg:text-xl italic text-white/30 leading-relaxed">
+      Това не е разказ за успеха. Това е разказ за това как успехът се
+      гради &mdash; един провал след друг, докато провалите станат стъпала.
+    </p>
+
+    <!-- CTA -->
+    <a href="#projects"
+       class="magnetic-btn inline-flex items-center gap-3 mt-10 px-8 py-4 bg-gold-400 text-dark-900 text-sm font-bold tracking-[0.12em] uppercase rounded-sm hover:bg-gold-300 transition-colors duration-300 font-body">
+      Виж каква система изградих от всичко това
+      <span class="text-base leading-none">&rarr;</span>
+    </a>
+  </div>
+
+</div>
+    </section>
+
+    <!-- ═══ PROJECTS ═══ -->
+    <section id="projects">
+      <!-- ═══ PROJECTS ═══
+     Three pillars: CODE: ABUNDANCE™, Creator Partnership, Strategic Mentoring
+     Cards use .project-card (::before gold gradient on hover) + .reveal for scroll entrance
+     ═══════════════════════════════════════════════════════════════════ -->
+
+<div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+  <!-- Section header -->
+  <div class="text-center mb-16 lg:mb-20">
+    <span class="reveal opacity-0 translate-y-8 inline-block text-gold-400 text-xs tracking-[0.3em] uppercase font-body">
+      Това, което градя
+    </span>
+    <h2 class="reveal opacity-0 translate-y-8 font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white mt-4">
+      Три пилона. Една мисия.
+    </h2>
+    <p class="reveal opacity-0 translate-y-8 text-white/40 text-lg font-body max-w-xl mx-auto mt-4 leading-relaxed">
+      Всяка инициатива служи на една цел: да помогна на хората да трансформират потенциала си в реализация.
+    </p>
+  </div>
+
+  <!-- Cards grid -->
+  <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+
+    <!-- ── Card 1: CODE: ABUNDANCE™ ── -->
+    <div class="reveal opacity-0 translate-y-8 project-card group bg-dark-700/40 border border-white/[0.04] p-8 lg:p-10 transition-all duration-500 hover:-translate-y-2 hover:border-gold-400/15 hover:shadow-[0_24px_64px_-16px_rgba(212,175,55,0.12)]">
+
+      <span class="text-accent-blue/70 text-[11px] tracking-[0.2em] uppercase font-body">
+        Образователна екосистема
+      </span>
+
+      <h3 class="font-display text-2xl font-bold text-white mt-3">
+        CODE: ABUNDANCE&trade;
+      </h3>
+
+      <p class="text-gold-400/70 text-sm font-body mt-1">
+        3 Labs &rarr; 90 Дни &rarr; Нова Реалност
+      </p>
+
+      <p class="text-white/35 text-sm font-body mt-4 leading-relaxed">
+        Най-иновативната образователна система в България. Три лаборатории, които покриват всяка сфера от живота ти &mdash; от финанси до здраве и взаимоотношения.
+      </p>
+
+      <ul class="mt-5 space-y-2">
+        <li class="text-white/30 text-sm font-body">
+          <span class="text-accent-blue/50 mr-2">&bull;</span>Wealth Lab
+        </li>
+        <li class="text-white/30 text-sm font-body">
+          <span class="text-accent-blue/50 mr-2">&bull;</span>Health Lab
+        </li>
+        <li class="text-white/30 text-sm font-body">
+          <span class="text-accent-blue/50 mr-2">&bull;</span>Prosperity Lab
+        </li>
+        <li class="text-white/30 text-sm font-body">
+          <span class="text-accent-blue/50 mr-2">&bull;</span>Relationship Lab
+        </li>
+      </ul>
+
+      <div class="text-white/20 text-[11px] tracking-wide font-body flex gap-3 mt-6">
+        <span>12 Нива</span>
+        <span>&bull;</span>
+        <span>Общност</span>
+        <span>&bull;</span>
+        <span>Лични планове</span>
+      </div>
+
+      <a href="#cta" class="inline-flex items-center gap-2 text-gold-400 text-sm font-bold tracking-wider uppercase font-body mt-8 transition-colors duration-300 hover:text-gold-300">
+        Влез в CODE: ABUNDANCE&trade;
+        <span class="inline-block transition-transform duration-300 group-hover:translate-x-1.5">&rarr;</span>
+      </a>
+    </div>
+
+    <!-- ── Card 2: CREATOR PARTNERSHIP ── -->
+    <div class="reveal opacity-0 translate-y-8 project-card group bg-dark-700/40 border border-white/[0.04] p-8 lg:p-10 transition-all duration-500 hover:-translate-y-2 hover:border-gold-400/15 hover:shadow-[0_24px_64px_-16px_rgba(212,175,55,0.12)]">
+
+      <span class="text-accent-purple/70 text-[11px] tracking-[0.2em] uppercase font-body">
+        Партньорски модел
+      </span>
+
+      <h3 class="font-display text-2xl font-bold text-white mt-3">
+        CREATOR PARTNERSHIP
+      </h3>
+
+      <p class="text-gold-400/70 text-sm font-body mt-1">
+        От 0 до 7 цифри
+      </p>
+
+      <p class="text-white/35 text-sm font-body mt-4 leading-relaxed">
+        Юридическата и стратегическа рамка за Growth Operators и Content Creators, които искат да растат заедно &mdash; без сиви зони и без рискове.
+      </p>
+
+      <ul class="mt-5 space-y-2">
+        <li class="text-white/30 text-sm font-body">
+          <span class="text-accent-purple/50 mr-2">&bull;</span>Професионална инфраструктура
+        </li>
+        <li class="text-white/30 text-sm font-body">
+          <span class="text-accent-purple/50 mr-2">&bull;</span>Справедливо разпределение
+        </li>
+        <li class="text-white/30 text-sm font-body">
+          <span class="text-accent-purple/50 mr-2">&bull;</span>Ясни рамки
+        </li>
+        <li class="text-white/30 text-sm font-body">
+          <span class="text-accent-purple/50 mr-2">&bull;</span>Защита за двете страни
+        </li>
+      </ul>
+
+      <div class="text-white/20 text-[11px] tracking-wide font-body flex gap-3 mt-6">
+        <span>3 Модела</span>
+        <span>&bull;</span>
+        <span>15 Раздела</span>
+        <span>&bull;</span>
+        <span>Инвест. стандарт</span>
+      </div>
+
+      <a href="#cta" class="inline-flex items-center gap-2 text-gold-400 text-sm font-bold tracking-wider uppercase font-body mt-8 transition-colors duration-300 hover:text-gold-300">
+        Изтегли фреймуорка
+        <span class="inline-block transition-transform duration-300 group-hover:translate-x-1.5">&rarr;</span>
+      </a>
+    </div>
+
+    <!-- ── Card 3: STRATEGIC MENTORING ── -->
+    <div class="reveal opacity-0 translate-y-8 project-card group bg-dark-700/40 border border-white/[0.04] p-8 lg:p-10 transition-all duration-500 hover:-translate-y-2 hover:border-gold-400/15 hover:shadow-[0_24px_64px_-16px_rgba(212,175,55,0.12)]">
+
+      <span class="text-accent-amber/70 text-[11px] tracking-[0.2em] uppercase font-body">
+        Ексклузивна достъпност
+      </span>
+
+      <h3 class="font-display text-2xl font-bold text-white mt-3">
+        STRATEGIC MENTORING
+      </h3>
+
+      <p class="text-gold-400/70 text-sm font-body mt-1">
+        Рамо до рамо за следващото ниво
+      </p>
+
+      <p class="text-white/35 text-sm font-body mt-4 leading-relaxed">
+        Не е за всеки. Лимитирани места годишно. За хора, които вече имат основата &mdash; и търсят партньор, който ги е изминал пътя.
+      </p>
+
+      <ul class="mt-5 space-y-2">
+        <li class="text-white/30 text-sm font-body">
+          <span class="text-accent-amber/50 mr-2">&bull;</span>Имат резултати, но усещат тавана
+        </li>
+        <li class="text-white/30 text-sm font-body">
+          <span class="text-accent-amber/50 mr-2">&bull;</span>Търсят системи, не мотивация
+        </li>
+        <li class="text-white/30 text-sm font-body">
+          <span class="text-accent-amber/50 mr-2">&bull;</span>Готови за трансформация
+        </li>
+        <li class="text-white/30 text-sm font-body">
+          <span class="text-accent-amber/50 mr-2">&bull;</span>Формати: 1:1 | DWY | DFY
+        </li>
+      </ul>
+
+      <div class="text-white/20 text-[11px] tracking-wide font-body flex gap-3 mt-6">
+        <span>Лимитирани</span>
+        <span>&bull;</span>
+        <span>С одобрение</span>
+        <span>&bull;</span>
+        <span>ROI гаранция</span>
+      </div>
+
+      <a href="#cta" class="inline-flex items-center gap-2 text-gold-400 text-sm font-bold tracking-wider uppercase font-body mt-8 transition-colors duration-300 hover:text-gold-300">
+        Кандидатствай за разговор
+        <span class="inline-block transition-transform duration-300 group-hover:translate-x-1.5">&rarr;</span>
+      </a>
+    </div>
+
+  </div>
+</div>
+    </section>
+
+    <!-- ═══ PHILOSOPHY ═══ -->
+    <section id="philosophy">
+      <!-- ═══ PHILOSOPHY ═══
+     Four pillars of Sean's operating system + signature quote block
+     Cards use .pillar-card (::after radial gold glow on hover) + .reveal for scroll entrance
+     ═══════════════════════════════════════════════════════════════════ -->
+
+<div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+  <!-- Section header -->
+  <div class="text-center mb-16 lg:mb-20">
+    <span class="reveal opacity-0 translate-y-8 inline-block text-gold-400 text-xs tracking-[0.3em] uppercase font-body">
+      Принципи, не теории
+    </span>
+    <h2 class="reveal opacity-0 translate-y-8 font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mt-4">
+      Готов ли си за истината?
+    </h2>
+  </div>
+
+  <!-- 4 Pillar Cards -->
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+    <!-- ── Pillar 1: Дисциплината е свобода ── -->
+    <div class="reveal opacity-0 translate-y-8 pillar-card bg-dark-800/40 border border-white/[0.04] p-8 text-center transition-all duration-500 hover:border-gold-400/15">
+
+      <div class="text-4xl mb-5" aria-hidden="true">&#9876;&#65039;</div>
+
+      <h3 class="font-display text-xl font-bold text-white uppercase tracking-wide">
+        Дисциплината е свобода
+      </h3>
+
+      <p class="text-white/35 text-sm font-body mt-4 leading-relaxed">
+        Мотивацията лъже. Идва и си отива като вятъра. Дисциплината остава, когато всичко друго се разпадне. Тя не ограничава &mdash; тя освобождава.
+      </p>
+    </div>
+
+    <!-- ── Pillar 2: Хаосът е враг ── -->
+    <div class="reveal opacity-0 translate-y-8 pillar-card bg-dark-800/40 border border-white/[0.04] p-8 text-center transition-all duration-500 hover:border-gold-400/15">
+
+      <div class="text-4xl mb-5" aria-hidden="true">&#128293;</div>
+
+      <h3 class="font-display text-xl font-bold text-white uppercase tracking-wide">
+        Хаосът е враг
+      </h3>
+
+      <p class="text-white/35 text-sm font-body mt-4 leading-relaxed">
+        Където изтича фокусът, енергията, времето и парите &mdash; там се крие хаосът. Без план, без система &mdash; всеки ден е пожар. Спри да гасиш, започни да строиш.
+      </p>
+    </div>
+
+    <!-- ── Pillar 3: Познай себе си — или загуби ── -->
+    <div class="reveal opacity-0 translate-y-8 pillar-card bg-dark-800/40 border border-white/[0.04] p-8 text-center transition-all duration-500 hover:border-gold-400/15">
+
+      <div class="text-4xl mb-5" aria-hidden="true">&#129516;</div>
+
+      <h3 class="font-display text-xl font-bold text-white uppercase tracking-wide">
+        Познай себе си &mdash; или загуби
+      </h3>
+
+      <p class="text-white/35 text-sm font-body mt-4 leading-relaxed">
+        Human Design не е мистика &mdash; е инструмент. Когато работиш С природата си вместо СРЕЩУ нея, резултатите идват с лекота, не с борба.
+      </p>
+    </div>
+
+    <!-- ── Pillar 4: Системите мащабират ── -->
+    <div class="reveal opacity-0 translate-y-8 pillar-card bg-dark-800/40 border border-white/[0.04] p-8 text-center transition-all duration-500 hover:border-gold-400/15">
+
+      <div class="text-4xl mb-5" aria-hidden="true">&#127959;&#65039;</div>
+
+      <h3 class="font-display text-xl font-bold text-white uppercase tracking-wide">
+        Системите мащабират
+      </h3>
+
+      <p class="text-white/35 text-sm font-body mt-4 leading-relaxed">
+        Не си мързелив &mdash; объркан си. Не ти липсва амбиция &mdash; липсва ти система. Намери правилната и я следвай. Системите правят това, което волята не може.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- ── Signature Quote Block ── -->
+  <div class="mt-20 lg:mt-28 text-center">
+
+    <div class="reveal opacity-0 translate-y-8">
+      <!-- Decorative dash -->
+      <div class="w-12 h-px bg-gold-400/30 mx-auto mb-10"></div>
+
+      <blockquote class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-[1.2]">
+        &ldquo;Не ти липсва талант.<br />
+        Не ти липсва амбиция.<br />
+        Липсва ти <span class="text-gold-400">СТРУКТУРА</span>.&rdquo;
+      </blockquote>
+
+      <div class="w-12 h-px bg-gold-400/30 mx-auto mt-10"></div>
+    </div>
+
+  </div>
+
+  <!-- ── Closing statement ── -->
+  <div class="mt-16 lg:mt-20 max-w-2xl mx-auto text-center">
+
+    <div class="reveal opacity-0 translate-y-8">
+      <p class="text-white/40 text-sm font-body leading-relaxed mb-6">
+        Тези принципи не са от книги. Те са уроци, платени с:
+      </p>
+
+      <div class="space-y-2.5 mb-8">
+        <p class="text-white/35 text-sm font-body leading-relaxed">
+          <span class="text-gold-400/60 mr-2">&rarr;</span>Милиони &mdash; загубени и спечелени
+        </p>
+        <p class="text-white/35 text-sm font-body leading-relaxed">
+          <span class="text-gold-400/60 mr-2">&rarr;</span>Години на проби и грешки
+        </p>
+        <p class="text-white/35 text-sm font-body leading-relaxed">
+          <span class="text-gold-400/60 mr-2">&rarr;</span>Лични провали и триумфи
+        </p>
+      </div>
+
+      <p class="text-white/50 text-base font-body leading-relaxed">
+        Сега ги предавам на теб &mdash; организирани, тествани, готови.
+      </p>
+    </div>
+
+  </div>
+
+</div>
+    </section>
+
+    <!-- ═══ SOCIAL PROOF ═══ -->
+    <section id="proof">
+      <!-- ═══ SOCIAL PROOF ═══
+     Stats grid with count-up animation + testimonial carousel.
+     Relies on: .reveal + .visible, .count-up observer, #testimonial-track + .testimonial-dot
+     ═══════════════════════════════════════════════════════════════════ -->
+
+<div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+  <!-- Header -->
+  <div class="text-center mb-16 lg:mb-20">
+    <span class="reveal opacity-0 translate-y-8 inline-block text-gold-400 text-[11px] tracking-[0.3em] uppercase font-body mb-4">
+      Резултатите говорят
+    </span>
+    <h2 class="reveal opacity-0 translate-y-8 font-display text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight">
+      Реални хора.<br />Реални трансформации.
+    </h2>
+  </div>
+
+  <!-- Stats Grid -->
+  <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-20">
+
+    <!-- Stat 1 — Years -->
+    <div class="reveal opacity-0 translate-y-8 text-center">
+      <div class="font-display text-5xl lg:text-6xl font-bold text-gold-400">
+        <span class="count-up" data-target="9" data-suffix="+">0</span>
+      </div>
+      <div class="text-[11px] tracking-[0.2em] uppercase text-white/30 mt-2 font-body">
+        Години опит
+      </div>
+    </div>
+
+    <!-- Stat 2 — Team -->
+    <div class="reveal opacity-0 translate-y-8 text-center">
+      <div class="font-display text-5xl lg:text-6xl font-bold text-gold-400">
+        <span class="count-up" data-target="120" data-suffix="+">0</span>
+      </div>
+      <div class="text-[11px] tracking-[0.2em] uppercase text-white/30 mt-2 font-body">
+        Члена екип изграждани
+      </div>
+    </div>
+
+    <!-- Stat 3 — Businesses -->
+    <div class="reveal opacity-0 translate-y-8 text-center">
+      <div class="font-display text-5xl lg:text-6xl font-bold text-gold-400">
+        <span class="count-up" data-target="7" data-suffix="+">0</span>
+      </div>
+      <div class="text-[11px] tracking-[0.2em] uppercase text-white/30 mt-2 font-body">
+        Бизнеса създадени
+      </div>
+    </div>
+
+    <!-- Stat 4 — Revenue -->
+    <div class="reveal opacity-0 translate-y-8 text-center">
+      <div class="font-display text-5xl lg:text-6xl font-bold text-white/50">
+        &mdash;
+      </div>
+      <div class="text-[11px] tracking-[0.2em] uppercase text-white/30 mt-2 font-body">
+        Млн. оборот генериран
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Testimonial Carousel -->
+  <div class="relative max-w-3xl mx-auto">
+
+    <div id="testimonial-carousel" class="overflow-hidden">
+      <div id="testimonial-track" class="flex transition-transform duration-500">
+
+        <!-- Slide 1 — Student -->
+        <div class="w-full flex-shrink-0 text-center px-8">
+          <p class="font-display text-xl lg:text-2xl text-white/60 italic leading-relaxed">
+            &ldquo;Преди Code: Abundance блуждаех без посока. След 3 месеца работа със Шон имах ясен план, екип и първите си резултати. Това не е поредният курс &mdash; това е система, която работи.&rdquo;
+          </p>
+          <p class="text-gold-400/70 text-sm tracking-wider uppercase mt-6 font-body">
+            &mdash; Д.К., участник в програмата
+          </p>
+        </div>
+
+        <!-- Slide 2 — Business Client -->
+        <div class="w-full flex-shrink-0 text-center px-8">
+          <p class="font-display text-xl lg:text-2xl text-white/60 italic leading-relaxed">
+            &ldquo;Шон не ти казва какво искаш да чуеш. Казва ти какво трябва да направиш. И после ти помага да го направиш. Резултатът? Бизнесът ми расте с темп, който не мислех за възможен.&rdquo;
+          </p>
+          <p class="text-gold-400/70 text-sm tracking-wider uppercase mt-6 font-body">
+            &mdash; А.М., бизнес клиент
+          </p>
+        </div>
+
+        <!-- Slide 3 — Creator Partner -->
+        <div class="w-full flex-shrink-0 text-center px-8">
+          <p class="font-display text-xl lg:text-2xl text-white/60 italic leading-relaxed">
+            &ldquo;Партньорството със Шон промени начина, по който мисля за скалиране. Не повече, а по-умно. Не по-бързо, а по-устойчиво. Философията е различна &mdash; и точно затова работи.&rdquo;
+          </p>
+          <p class="text-gold-400/70 text-sm tracking-wider uppercase mt-6 font-body">
+            &mdash; И.С., креативен партньор
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Dots -->
+    <div class="flex justify-center gap-2.5 mt-8">
+      <button class="testimonial-dot w-2.5 h-2.5 rounded-full bg-gold-400 transition-colors duration-300" data-index="0" aria-label="Отзив 1"></button>
+      <button class="testimonial-dot w-2.5 h-2.5 rounded-full bg-white/15 transition-colors duration-300" data-index="1" aria-label="Отзив 2"></button>
+      <button class="testimonial-dot w-2.5 h-2.5 rounded-full bg-white/15 transition-colors duration-300" data-index="2" aria-label="Отзив 3"></button>
+    </div>
+
+  </div>
+
+  <!-- Media Bar -->
+  <div class="mt-16 text-center">
+    <span class="text-white/15 text-[11px] tracking-[0.3em] uppercase font-body">
+      Както се говори в:
+    </span>
+    <div class="flex gap-10 justify-center items-center mt-4 opacity-15">
+      <span class="text-white text-sm font-body tracking-wider">[Лого 1]</span>
+      <span class="text-white text-sm font-body tracking-wider">[Лого 2]</span>
+      <span class="text-white text-sm font-body tracking-wider">[Лого 3]</span>
+      <span class="text-white text-sm font-body tracking-wider">[Лого 4]</span>
+    </div>
+  </div>
+
+</div>
+    </section>
+
+    <!-- ═══ FINAL CTA ═══ -->
+    <section id="cta">
+      <!-- ═══ FINAL CTA ═══
+     Closing conversion section: binary choice framing + gold pulse CTA.
+     Relies on: .reveal + .visible, .magnetic-btn, .animate-pulse-gold
+     ═══════════════════════════════════════════════════════════════════ -->
+
+<!-- Background layers -->
+<div class="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-800 to-dark-900"></div>
+<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_40%,rgba(212,175,55,0.06),transparent_65%)]"></div>
+
+<!-- Content -->
+<div class="relative z-10 max-w-3xl mx-auto px-6 lg:px-8 text-center">
+
+  <!-- Headline -->
+  <h2 class="reveal opacity-0 translate-y-8 font-display text-4xl sm:text-5xl lg:text-7xl font-bold leading-[1.08]">
+    Липсата е избор.<br />
+    <span class="text-gold-400">Изобилието &mdash; също.</span>
+  </h2>
+
+  <!-- Supporting copy -->
+  <div class="reveal opacity-0 translate-y-8 mt-8 max-w-xl mx-auto">
+    <p class="font-body text-lg text-white/50 leading-relaxed">
+      Вече видя пътя. Видя системата. Видя философията.
+    </p>
+    <div class="mt-6 space-y-3 font-body text-sm">
+      <p class="text-white/30">
+        <span class="text-gold-400/40 mr-2">1.</span>Можеш да затвориш тази страница и да продължиш както досега.
+      </p>
+      <p class="text-white/60">
+        <span class="text-gold-400/60 mr-2">2.</span>Или да разбереш дали Code: Abundance е за теб.
+      </p>
+    </div>
+    <p class="mt-5 font-display text-base italic text-white/25">
+      Първият е безопасен. Вторият води някъде.
+    </p>
+  </div>
+
+  <!-- Primary CTA -->
+  <div class="reveal opacity-0 translate-y-8 mt-10">
+    <a href="#"
+       class="magnetic-btn animate-pulse-gold inline-flex items-center gap-3 px-10 py-5 bg-gold-400 text-dark-900 text-sm sm:text-base font-bold tracking-[0.1em] uppercase rounded-sm hover:bg-gold-300 transition-colors duration-300">
+      Направи безплатната си диагностика сега
+      <span class="text-lg leading-none">&rarr;</span>
+    </a>
+  </div>
+
+  <!-- Secondary CTA -->
+  <div class="reveal mt-6">
+    <a href="#"
+       class="inline-block font-body text-sm text-white/40 hover:text-white/70 underline underline-offset-4 decoration-white/15 hover:decoration-gold-400/40 transition-all duration-300">
+      Или запази час за стратегическа сесия &rarr;
+    </a>
+  </div>
+
+  <!-- Urgency -->
+  <div class="reveal mt-8">
+    <p class="text-gold-400/50 text-sm font-body">
+      &#9889; Лимитирани места за този месец
+    </p>
+  </div>
+
+</div>
+    </section>
+  </main>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer id="footer">
+    <!-- ═══ FOOTER ═══
+     Newsletter bar + link grid + bottom copyright bar.
+     ═══════════════════════════════════════════════════════════════════ -->
+
+<!-- Newsletter Bar -->
+<div class="bg-dark-800/40 py-12">
+  <div class="max-w-2xl mx-auto px-6 lg:px-8 text-center">
+
+    <h3 class="font-display text-2xl font-bold text-white">
+      Получавай инсайти директно
+    </h3>
+    <p class="text-white/35 text-sm font-body mt-2">
+      Без спам. Само стойност.
+    </p>
+
+    <form class="mt-6 flex flex-col sm:flex-row gap-3 max-w-md mx-auto" action="#" method="post">
+      <input
+        type="email"
+        name="email"
+        required
+        placeholder="Твоят имейл"
+        class="flex-1 bg-dark-700 border border-white/[0.06] text-white placeholder-white/25 text-sm px-4 py-3 rounded-sm focus:border-gold-400/40 focus:outline-none transition-colors duration-300 font-body"
+      />
+      <button
+        type="submit"
+        class="bg-gold-400 text-dark-900 font-bold text-sm tracking-wider uppercase px-6 py-3 rounded-sm hover:bg-gold-300 transition-colors duration-300 font-body"
+      >
+        Абонирай се
+      </button>
+    </form>
+
+  </div>
+</div>
+
+<!-- Footer Grid -->
+<div class="max-w-7xl mx-auto px-6 lg:px-8 py-12">
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+    <!-- Col 1 — About -->
+    <div>
+      <h4 class="font-display text-lg font-bold text-white mb-4">За мен</h4>
+      <div class="space-y-1.5">
+        <p class="text-white/30 text-sm font-body">Sean Isa</p>
+        <p class="text-white/30 text-sm font-body">Основател</p>
+        <p class="text-white/30 text-sm font-body">Предприемач</p>
+        <p class="text-white/30 text-sm font-body">Ментор</p>
+      </div>
+    </div>
+
+    <!-- Col 2 — Projects -->
+    <div>
+      <h4 class="font-display text-lg font-bold text-white mb-4">Проекти</h4>
+      <div class="space-y-1.5">
+        <a href="#" class="block text-white/30 text-sm font-body hover:text-gold-400 transition-colors duration-300">
+          Code: Abundance
+        </a>
+        <a href="#" class="block text-white/30 text-sm font-body hover:text-gold-400 transition-colors duration-300">
+          Creator Partnership
+        </a>
+        <a href="#" class="block text-white/30 text-sm font-body hover:text-gold-400 transition-colors duration-300">
+          1:1 Mentoring
+        </a>
+      </div>
+    </div>
+
+    <!-- Col 3 — Resources -->
+    <div>
+      <h4 class="font-display text-lg font-bold text-white mb-4">Ресурси</h4>
+      <div class="space-y-1.5">
+        <span class="block text-white/15 text-sm font-body">Блог (очаквай)</span>
+        <span class="block text-white/15 text-sm font-body">Подкаст</span>
+        <span class="block text-white/15 text-sm font-body">FAQ</span>
+      </div>
+    </div>
+
+    <!-- Col 4 — Contact / Socials -->
+    <div>
+      <h4 class="font-display text-lg font-bold text-white mb-4">Контакт</h4>
+      <div class="space-y-1.5">
+        <a href="#" target="_blank" rel="noopener noreferrer" class="block text-white/30 text-sm font-body hover:text-gold-400 transition-colors duration-300">
+          Instagram
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="block text-white/30 text-sm font-body hover:text-gold-400 transition-colors duration-300">
+          TikTok
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="block text-white/30 text-sm font-body hover:text-gold-400 transition-colors duration-300">
+          YouTube
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="block text-white/30 text-sm font-body hover:text-gold-400 transition-colors duration-300">
+          LinkedIn
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Bottom Bar -->
+<div class="border-t border-white/[0.04]">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <p class="text-white/15 text-xs font-body">
+      &copy; 2024 Sean Isa. Всички права запазени.
+    </p>
+    <div class="flex items-center gap-4">
+      <a href="#" class="text-white/15 text-xs font-body hover:text-white/30 transition-colors duration-300">
+        Политика за поверителност
+      </a>
+      <span class="text-white/10 text-xs">|</span>
+      <a href="#" class="text-white/15 text-xs font-body hover:text-white/30 transition-colors duration-300">
+        Условия за ползване
+      </a>
+    </div>
+  </div>
+</div>
+  </footer>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

@@ -275,295 +275,425 @@
 </div>
     </section>
 
-    <!-- ═══ JOURNEY / TIMELINE ═══ -->
-    <section id="journey">
-      <!-- ═══ JOURNEY / TIMELINE ═══
-     Interactive vertical timeline — 12 milestones from Sean Isa's life.
-     Alternates left/right on lg+, stacks left-aligned on mobile.
-     Each item has a collapsible "lesson" via .lesson-toggle / .lesson-content.
-     IntersectionObserver in main.ts adds .visible to .timeline-item on scroll.
-     ═══════════════════════════════════════════════════════════════════════ -->
+    <!-- ═══ JOURNEY / FOUNDER STORY ═══ -->
+    <section id="journey" class="py-24 lg:py-32">
+      <div class="max-w-4xl mx-auto px-6 lg:px-8">
 
-<div class="py-24 lg:py-32">
+        <!-- Bio Card -->
+        <div class="reveal opacity-0 translate-y-8 bg-dark-800/60 border border-white/[0.06] rounded-2xl p-6 md:p-8 mb-16">
+          <div class="flex flex-col md:flex-row items-center gap-6 md:gap-8">
+            <div class="w-36 h-36 md:w-44 md:h-44 rounded-xl overflow-hidden border-2 border-gold-400/20 flex-shrink-0">
+              <img src="/sean-portrait.jpg" alt="Шон Иса" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div class="text-center md:text-left">
+              <p class="text-base md:text-lg text-white/60 leading-relaxed mb-4">
+                Той не е теоретик. Той е <strong class="text-white">предприемач по душа</strong> и бивш <strong class="text-white">национален състезател за България</strong>. Всяка една стратегия, бизнес модел и концепция е лично тествана на бойното поле в живота и са извадени работещите практики тук наготово за всеки студент.
+              </p>
+              <p class="text-base md:text-lg text-gold-400 font-semibold leading-relaxed">
+                КОД: ИЗОБИЛИЕ™ е структурираният резултат от всички уроци. Спести си годините лутане и болка и вземи готовия си личен план сега.
+              </p>
+            </div>
+          </div>
+        </div>
 
-  <!-- Section header -->
-  <div class="max-w-5xl mx-auto px-6 lg:px-8 text-center mb-20 lg:mb-28">
+        <!-- Heading -->
+        <div class="text-center mb-12">
+          <h2 class="reveal opacity-0 translate-y-8 font-display text-3xl sm:text-4xl lg:text-5xl font-bold">
+            ВИЖ <span class="text-gold-400">ПЪТЯ НА ШОН ИСА</span>
+          </h2>
+        </div>
 
-    <!-- Label -->
-    <p class="text-gold-400 text-xs tracking-[0.3em] uppercase font-body mb-5">
-      От хаоса към системата
-    </p>
+        <!-- Accordion -->
+        <div id="founder-accordion" class="space-y-3">
 
-    <!-- Headline -->
-    <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] mb-6">
-      Всяка голяма трансформация<br class="hidden sm:block" />
-      започва с разпад
-    </h2>
+          <!-- Step 1 -->
+          <div class="accordion-item reveal opacity-0 translate-y-6 bg-dark-800/40 border border-white/[0.06] rounded-xl overflow-hidden hover:border-gold-400/30 transition-all duration-300">
+            <button class="accordion-trigger w-full px-5 py-4 flex items-center justify-between text-left hover:bg-dark-700/30 transition-colors duration-200">
+              <div class="flex items-center gap-4 flex-1">
+                <div class="w-11 h-11 rounded-lg bg-gold-400/10 flex items-center justify-center flex-shrink-0">
+                  <span class="text-gold-400 font-bold text-lg font-body">1</span>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="text-xs text-gold-400 font-semibold tracking-wider uppercase font-body mb-0.5">Детство</div>
+                  <div class="text-base md:text-lg font-bold text-white font-display">Раздвоено семейство, липси, първата дисциплина</div>
+                </div>
+              </div>
+              <svg class="accordion-chevron w-5 h-5 text-white/30 flex-shrink-0 ml-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="accordion-content">
+              <div class="px-5 pb-5 pt-1 border-t border-white/[0.04]">
+                <ul class="space-y-2.5 pl-15 md:pl-[60px]">
+                  <li class="flex items-start gap-2.5"><span class="text-gold-400/60 mt-0.5">•</span><span class="text-white/50 text-sm leading-relaxed font-body">Роден в София, в семейство на разделени родители, българка и нигериец.</span></li>
+                  <li class="flex items-start gap-2.5"><span class="text-gold-400/60 mt-0.5">•</span><span class="text-white/50 text-sm leading-relaxed font-body">Още на 5 години свиква на самостоятелност и дисциплина.</span></li>
+                  <li class="flex items-start gap-2.5"><span class="text-gold-400/60 mt-0.5">•</span><span class="text-white/50 text-sm leading-relaxed font-body">Израства с осъзнаването, че светът е пълен с ограничения, което запалва стремежа му да осигури живот без липси.</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
 
-    <!-- Intro paragraph -->
-    <p class="max-w-2xl mx-auto text-white/40 text-base lg:text-lg leading-relaxed font-body">
-      Роден в разделено семейство &mdash; българска майка, нигерийски баща.
-      Израснал между два свята, без пътна карта, без мрежа за безопасност.
-      Това, което следва, не е филтрирана версия на живота &mdash;
-      това е суровата хронология на провали, пробиви и уроците между тях.
-    </p>
-  </div>
+          <!-- Step 2 -->
+          <div class="accordion-item reveal opacity-0 translate-y-6 bg-dark-800/40 border border-white/[0.06] rounded-xl overflow-hidden hover:border-gold-400/30 transition-all duration-300">
+            <button class="accordion-trigger w-full px-5 py-4 flex items-center justify-between text-left hover:bg-dark-700/30 transition-colors duration-200">
+              <div class="flex items-center gap-4 flex-1">
+                <div class="w-11 h-11 rounded-lg bg-gold-400/10 flex items-center justify-center flex-shrink-0">
+                  <span class="text-gold-400 font-bold text-lg font-body">2</span>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="text-xs text-gold-400 font-semibold tracking-wider uppercase font-body mb-0.5">Спортът като спасение</div>
+                  <div class="text-base md:text-lg font-bold text-white font-display">Лека атлетика и първите медали</div>
+                </div>
+              </div>
+              <svg class="accordion-chevron w-5 h-5 text-white/30 flex-shrink-0 ml-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="accordion-content">
+              <div class="px-5 pb-5 pt-1 border-t border-white/[0.04]">
+                <ul class="space-y-2.5 pl-15 md:pl-[60px]">
+                  <li class="flex items-start gap-2.5"><span class="text-gold-400/60 mt-0.5">•</span><span class="text-white/50 text-sm leading-relaxed font-body">Преминава през футбол, карате, баскетбол, кау-каяк и плуване, докато открива леката атлетика.</span></li>
+                  <li class="flex items-start gap-2.5"><span class="text-gold-400/60 mt-0.5">•</span><span class="text-white/50 text-sm leading-relaxed font-body">Пет години състезания и отличия под менторството на доверена треньорка в кръга на олимпиеца Христо Марков.</span></li>
+                  <li class="flex items-start gap-2.5"><span class="text-gold-400/60 mt-0.5">•</span><span class="text-white/50 text-sm leading-relaxed font-body">Натрупва фундамент от дисциплина, концентрация и стремеж към върха.</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
 
-  <!-- Timeline container -->
-  <div class="max-w-5xl mx-auto px-6 lg:px-8 relative">
+          <!-- Step 3 -->
+          <div class="accordion-item reveal opacity-0 translate-y-6 bg-dark-800/40 border border-white/[0.06] rounded-xl overflow-hidden hover:border-gold-400/30 transition-all duration-300">
+            <button class="accordion-trigger w-full px-5 py-4 flex items-center justify-between text-left hover:bg-dark-700/30 transition-colors duration-200">
+              <div class="flex items-center gap-4 flex-1">
+                <div class="w-11 h-11 rounded-lg bg-gold-400/10 flex items-center justify-center flex-shrink-0">
+                  <span class="text-gold-400 font-bold text-lg font-body">3</span>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="text-xs text-gold-400 font-semibold tracking-wider uppercase font-body mb-0.5">YouTube и първите книги</div>
+                  <div class="text-base md:text-lg font-bold text-white font-display">Пробуждането</div>
+                </div>
+              </div>
+              <svg class="accordion-chevron w-5 h-5 text-white/30 flex-shrink-0 ml-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="accordion-content">
+              <div class="px-5 pb-5 pt-1 border-t border-white/[0.04]">
+                <ul class="space-y-2.5 pl-15 md:pl-[60px]">
+                  <li class="flex items-start gap-2.5"><span class="text-gold-400/60 mt-0.5">•</span><span class="text-white/50 text-sm leading-relaxed font-body">Открива YouTube и книгата The Secret още в четвърти клас, когато е на 10г.</span></li>
+                  <li class="flex items-start gap-2.5"><span class="text-gold-400/60 mt-0.5">•</span><span class="text-white/50 text-sm leading-relaxed font-body">Преживява събуждане към личностното развитие и финансовата свобода.</span></li>
+                  <li class="flex items-start gap-2.5"><span class="text-gold-400/60 mt-0.5">•</span><span class="text-white/50 text-sm leading-relaxed font-body">Преминава през творбите на Наполеон Хил, Кийосаки, Карнеги, Гардон... основателите на неговото мислене.</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
 
-    <!-- Vertical line -->
-    <div class="absolute left-6 lg:left-1/2 top-0 bottom-0 w-px bg-white/10"></div>
+          <!-- Step 4 -->
+          <div class="accordion-item reveal opacity-0 translate-y-6 bg-dark-800/40 border border-white/[0.06] rounded-xl overflow-hidden hover:border-gold-400/30 transition-all duration-300">
+            <button class="accordion-trigger w-full px-5 py-4 flex items-center justify-between text-left hover:bg-dark-700/30 transition-colors duration-200">
+              <div class="flex items-center gap-4 flex-1">
+                <div class="w-11 h-11 rounded-lg bg-gold-400/10 flex items-center justify-center flex-shrink-0">
+                  <span class="text-gold-400 font-bold text-lg font-body">4</span>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="text-xs text-gold-400 font-semibold tracking-wider uppercase font-body mb-0.5">Първите пари</div>
+                  <div class="text-base md:text-lg font-bold text-white font-display">Продажби, велосипеди, hustle mindset</div>
+                </div>
+              </div>
+              <svg class="accordion-chevron w-5 h-5 text-white/30 flex-shrink-0 ml-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="accordion-content">
+              <div class="px-5 pb-5 pt-1 border-t border-white/[0.04]">
+                <ul class="space-y-2.5 pl-15 md:pl-[60px]">
+                  <li class="flex items-start gap-2.5"><span class="text-gold-400/60 mt-0.5">•</span><span class="text-white/50 text-sm leading-relaxed font-body">Продава собственото си колело, за да стартира първия си бизнес.</span></li>
+                  <li class="flex items-start gap-2.5"><span class="text-gold-400/60 mt-0.5">•</span><span class="text-white/50 text-sm leading-relaxed font-body">Купува и препродава стоки онлайн, печелейки първите си средства, за да има джобни за училище.</span></li>
+                  <li class="flex items-start gap-2.5"><span class="text-gold-400/60 mt-0.5">•</span><span class="text-white/50 text-sm leading-relaxed font-body">Осъзнава, че амбицията, подкрепена от действия, създава резултати.</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
 
-    <!-- ─── Item 1 · LEFT ─── -->
-    <div class="timeline-item opacity-0 translate-y-8 relative pl-16 lg:pl-0 lg:w-1/2 lg:pr-12 mb-16">
-      <!-- Dot -->
-      <div class="absolute left-4 lg:left-auto lg:right-[-8px] top-1 w-3.5 h-3.5 rounded-full border-2 border-gold-400/50 bg-dark-900 z-10"></div>
-      <!-- Content -->
-      <span class="text-gold-400/70 text-[11px] tracking-[0.2em] uppercase font-bold font-body">Година: 5&ndash;15</span>
-      <h3 class="font-display text-xl lg:text-2xl font-bold mt-1.5">Спортът като фундамент</h3>
-      <p class="text-white/40 text-sm mt-2 leading-relaxed font-body">
-        Лека атлетика под менторството на треньорка в кръга на Христо Марков.
-        Пет години състезания, медали, дисциплина.
-      </p>
-      <button class="lesson-toggle text-gold-400/50 hover:text-gold-400 text-xs tracking-wider uppercase mt-3 transition-colors duration-300 cursor-pointer font-body">Научен урок &darr;</button>
-      <div class="lesson-content max-h-0 overflow-hidden transition-all duration-300">
-        <p class="text-white/25 text-sm mt-2 italic border-l-2 border-gold-400/15 pl-3 font-body">
-          Дисциплината е свобода. Концентрацията е суперсила.
-        </p>
+          <!-- Step 5 -->
+          <div class="accordion-item reveal opacity-0 translate-y-6 bg-dark-800/40 border border-white/[0.06] rounded-xl overflow-hidden hover:border-gold-400/30 transition-all duration-300">
+            <button class="accordion-trigger w-full px-5 py-4 flex items-center justify-between text-left hover:bg-dark-700/30 transition-colors duration-200">
+              <div class="flex items-center gap-4 flex-1">
+                <div class="w-11 h-11 rounded-lg bg-gold-400/10 flex items-center justify-center flex-shrink-0">
+                  <span class="text-gold-400 font-bold text-lg font-body">5</span>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="text-xs text-gold-400 font-semibold tracking-wider uppercase font-body mb-0.5">10 000 човека на улицата</div>
+                  <div class="text-base md:text-lg font-bold text-white font-display">Психологията на въздействието</div>
+                </div>
+              </div>
+              <svg class="accordion-chevron w-5 h-5 text-white/30 flex-shrink-0 ml-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="accordion-content">
+              <div class="px-5 pb-5 pt-1 border-t border-white/[0.04]">
+                <ul class="space-y-2.5 pl-15 md:pl-[60px]">
+                  <li class="flex items-start gap-2.5"><span class="text-gold-400/60 mt-0.5">•</span><span class="text-white/50 text-sm leading-relaxed font-body">Поема предизвикателството да продаде книги на 10 000 непознати души.</span></li>
+                  <li class="flex items-start gap-2.5"><span class="text-gold-400/60 mt-0.5">•</span><span class="text-white/50 text-sm leading-relaxed font-body">Улиците и моловете на София се превръщат в школа по продажби и психология.</span></li>
+                  <li class="flex items-start gap-2.5"><span class="text-gold-400/60 mt-0.5">•</span><span class="text-white/50 text-sm leading-relaxed font-body">Преодолява страха от отхвърляне и изгражда необичайна социална устойчивост.</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 6 -->
+          <div class="accordion-item reveal opacity-0 translate-y-6 bg-dark-800/40 border border-white/[0.06] rounded-xl overflow-hidden hover:border-gold-400/30 transition-all duration-300">
+            <button class="accordion-trigger w-full px-5 py-4 flex items-center justify-between text-left hover:bg-dark-700/30 transition-colors duration-200">
+              <div class="flex items-center gap-4 flex-1">
+                <div class="w-11 h-11 rounded-lg bg-gold-400/10 flex items-center justify-center flex-shrink-0">
+                  <span class="text-gold-400 font-bold text-lg font-body">6</span>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="text-xs text-gold-400 font-semibold tracking-wider uppercase font-body mb-0.5">Голям екип и директни продажби</div>
+                  <div class="text-base md:text-lg font-bold text-white font-display">Лидерство и управление</div>
+                </div>
+              </div>
+              <svg class="accordion-chevron w-5 h-5 text-white/30 flex-shrink-0 ml-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="accordion-content">
+              <div class="px-5 pb-5 pt-1 border-t border-white/[0.04]">
+                <ul class="space-y-2.5 pl-15 md:pl-[60px]">
+                  <li class="flex items-start gap-2.5"><span class="text-gold-400/60 mt-0.5">•</span><span class="text-white/50 text-sm leading-relaxed font-body">След кампанията с книгите изгражда над 100-членен екип в класически компании за директни продажби.</span></li>
+                  <li class="flex items-start gap-2.5"><span class="text-gold-400/60 mt-0.5">•</span><span class="text-white/50 text-sm leading-relaxed font-body">Работи с продукти като козметика, хранителни добавки, тъговски мрежи и други.</span></li>
+                  <li class="flex items-start gap-2.5"><span class="text-gold-400/60 mt-0.5">•</span><span class="text-white/50 text-sm leading-relaxed font-body">Формира лидерски умения, системно мислене и способност да управлява мащабни структури.</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 7 -->
+          <div class="accordion-item reveal opacity-0 translate-y-6 bg-dark-800/40 border border-white/[0.06] rounded-xl overflow-hidden hover:border-gold-400/30 transition-all duration-300">
+            <button class="accordion-trigger w-full px-5 py-4 flex items-center justify-between text-left hover:bg-dark-700/30 transition-colors duration-200">
+              <div class="flex items-center gap-4 flex-1">
+                <div class="w-11 h-11 rounded-lg bg-gold-400/10 flex items-center justify-center flex-shrink-0">
+                  <span class="text-gold-400 font-bold text-lg font-body">7</span>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="text-xs text-gold-400 font-semibold tracking-wider uppercase font-body mb-0.5">Хокей на лед</div>
+                  <div class="text-base md:text-lg font-bold text-white font-display">Национален отбор, дисциплина, войнско мислене</div>
+                </div>
+              </div>
+              <svg class="accordion-chevron w-5 h-5 text-white/30 flex-shrink-0 ml-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="accordion-content">
+              <div class="px-5 pb-5 pt-1 border-t border-white/[0.04]">
+                <ul class="space-y-2.5 pl-15 md:pl-[60px]">
+                  <li class="flex items-start gap-2.5"><span class="text-gold-400/60 mt-0.5">•</span><span class="text-white/50 text-sm leading-relaxed font-body">От новак на пързалката се превръща в професионален хокеист и влиза в националния отбор на България.</span></li>
+                  <li class="flex items-start gap-2.5"><span class="text-gold-400/60 mt-0.5">•</span><span class="text-white/50 text-sm leading-relaxed font-body">Участва в световни първенства и печели златен медал, както и титлата за &ldquo;Best player of the Game&rdquo; при обрата срещу Израел &mdash; първо злато за Националния отбор в дивизията в историята на България (2019).</span></li>
+                  <li class="flex items-start gap-2.5"><span class="text-gold-400/60 mt-0.5">•</span><span class="text-white/50 text-sm leading-relaxed font-body">Затвърждава манталитет на дисциплина, стратегия и устойчивост.</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 8 -->
+          <div class="accordion-item reveal opacity-0 translate-y-6 bg-dark-800/40 border border-white/[0.06] rounded-xl overflow-hidden hover:border-gold-400/30 transition-all duration-300">
+            <button class="accordion-trigger w-full px-5 py-4 flex items-center justify-between text-left hover:bg-dark-700/30 transition-colors duration-200">
+              <div class="flex items-center gap-4 flex-1">
+                <div class="w-11 h-11 rounded-lg bg-gold-400/10 flex items-center justify-center flex-shrink-0">
+                  <span class="text-gold-400 font-bold text-lg font-body">8</span>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="text-xs text-gold-400 font-semibold tracking-wider uppercase font-body mb-0.5">Спиране на училище</div>
+                  <div class="text-base md:text-lg font-bold text-white font-display">Преминаване към самостоятелна форма</div>
+                </div>
+              </div>
+              <svg class="accordion-chevron w-5 h-5 text-white/30 flex-shrink-0 ml-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="accordion-content">
+              <div class="px-5 pb-5 pt-1 border-t border-white/[0.04]">
+                <ul class="space-y-2.5 pl-15 md:pl-[60px]">
+                  <li class="flex items-start gap-2.5"><span class="text-gold-400/60 mt-0.5">•</span><span class="text-white/50 text-sm leading-relaxed font-body">За да съчетае бизнеса и спорта, преминава към самостоятелна форма на обучение.</span></li>
+                  <li class="flex items-start gap-2.5"><span class="text-gold-400/60 mt-0.5">•</span><span class="text-white/50 text-sm leading-relaxed font-body">Това го учи да поема отговорност за развитието си и да работи без възрастовия натиск на средата му.</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 9 -->
+          <div class="accordion-item reveal opacity-0 translate-y-6 bg-dark-800/40 border border-white/[0.06] rounded-xl overflow-hidden hover:border-gold-400/30 transition-all duration-300">
+            <button class="accordion-trigger w-full px-5 py-4 flex items-center justify-between text-left hover:bg-dark-700/30 transition-colors duration-200">
+              <div class="flex items-center gap-4 flex-1">
+                <div class="w-11 h-11 rounded-lg bg-gold-400/10 flex items-center justify-center flex-shrink-0">
+                  <span class="text-gold-400 font-bold text-lg font-body">9</span>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="text-xs text-gold-400 font-semibold tracking-wider uppercase font-body mb-0.5">Крипто, Web3</div>
+                  <div class="text-base md:text-lg font-bold text-white font-display">Първите печалби и първите падения</div>
+                </div>
+              </div>
+              <svg class="accordion-chevron w-5 h-5 text-white/30 flex-shrink-0 ml-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="accordion-content">
+              <div class="px-5 pb-5 pt-1 border-t border-white/[0.04]">
+                <ul class="space-y-2.5 pl-15 md:pl-[60px]">
+                  <li class="flex items-start gap-2.5"><span class="text-gold-400/60 mt-0.5">•</span><span class="text-white/50 text-sm leading-relaxed font-body">В периода на локдауна изучава пазари, Forex и крипто.</span></li>
+                  <li class="flex items-start gap-2.5"><span class="text-gold-400/60 mt-0.5">•</span><span class="text-white/50 text-sm leading-relaxed font-body">Постига бързи печалби, спортни автомобили, луксозен живот в Арабските Емирства, но и значителни загуби, некачествени инвестиционни решения.</span></li>
+                  <li class="flex items-start gap-2.5"><span class="text-gold-400/60 mt-0.5">•</span><span class="text-white/50 text-sm leading-relaxed font-body">Става обект на публични обвинения и критика, поради негативна PR кампания и се сблъсква с негативите от мнението на обществото.</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 10 -->
+          <div class="accordion-item reveal opacity-0 translate-y-6 bg-dark-800/40 border border-white/[0.06] rounded-xl overflow-hidden hover:border-gold-400/30 transition-all duration-300">
+            <button class="accordion-trigger w-full px-5 py-4 flex items-center justify-between text-left hover:bg-dark-700/30 transition-colors duration-200">
+              <div class="flex items-center gap-4 flex-1">
+                <div class="w-11 h-11 rounded-lg bg-gold-400/10 flex items-center justify-center flex-shrink-0">
+                  <span class="text-gold-400 font-bold text-lg font-body">10</span>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="text-xs text-gold-400 font-semibold tracking-wider uppercase font-body mb-0.5">CBD компания</div>
+                  <div class="text-base md:text-lg font-bold text-white font-display">Стотици обекти, възходът, рекламата, парите... и падението</div>
+                </div>
+              </div>
+              <svg class="accordion-chevron w-5 h-5 text-white/30 flex-shrink-0 ml-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="accordion-content">
+              <div class="px-5 pb-5 pt-1 border-t border-white/[0.04]">
+                <ul class="space-y-2.5 pl-15 md:pl-[60px]">
+                  <li class="flex items-start gap-2.5"><span class="text-gold-400/60 mt-0.5">•</span><span class="text-white/50 text-sm leading-relaxed font-body">Създава CBD бизнес с международен обхват в 8 държави.</span></li>
+                  <li class="flex items-start gap-2.5"><span class="text-gold-400/60 mt-0.5">•</span><span class="text-white/50 text-sm leading-relaxed font-body">Маркетинг с инфлуенсъри, яхти, луксозни събития и силна бранд идентичност.</span></li>
+                  <li class="flex items-start gap-2.5"><span class="text-gold-400/60 mt-0.5">•</span><span class="text-white/50 text-sm leading-relaxed font-body">Продуктът е добър, но пазарът остава недооценен и бизнесът не достига потенциала си.</span></li>
+                  <li class="flex items-start gap-2.5"><span class="text-gold-400/60 mt-0.5">•</span><span class="text-white/50 text-sm leading-relaxed font-body">Попада в минус шестцифрени суми, задължения, прекъснати сделки, нереализирани проекти.</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 11 -->
+          <div class="accordion-item reveal opacity-0 translate-y-6 bg-dark-800/40 border border-white/[0.06] rounded-xl overflow-hidden hover:border-gold-400/30 transition-all duration-300">
+            <button class="accordion-trigger w-full px-5 py-4 flex items-center justify-between text-left hover:bg-dark-700/30 transition-colors duration-200">
+              <div class="flex items-center gap-4 flex-1">
+                <div class="w-11 h-11 rounded-lg bg-gold-400/10 flex items-center justify-center flex-shrink-0">
+                  <span class="text-gold-400 font-bold text-lg font-body">11</span>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="text-xs text-gold-400 font-semibold tracking-wider uppercase font-body mb-0.5">Дубай</div>
+                  <div class="text-base md:text-lg font-bold text-white font-display">Глобален нетуърк, бизнес гиганти, стратегическо позициониране</div>
+                </div>
+              </div>
+              <svg class="accordion-chevron w-5 h-5 text-white/30 flex-shrink-0 ml-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="accordion-content">
+              <div class="px-5 pb-5 pt-1 border-t border-white/[0.04]">
+                <ul class="space-y-2.5 pl-15 md:pl-[60px]">
+                  <li class="flex items-start gap-2.5"><span class="text-gold-400/60 mt-0.5">•</span><span class="text-white/50 text-sm leading-relaxed font-body">Пътува до десетки локации, сред които Дубай, Марбея, Лондон, Стокхолм, Прага, Будапещ, Атина, Букурещ, Берлин, Београд и изгражда мрежа от мултимилионери и предприемачи.</span></li>
+                  <li class="flex items-start gap-2.5"><span class="text-gold-400/60 mt-0.5">•</span><span class="text-white/50 text-sm leading-relaxed font-body">Влиза в непосредствен контакт с най-известните добре познати големи фигури на онлайн пространството.</span></li>
+                  <li class="flex items-start gap-2.5"><span class="text-gold-400/60 mt-0.5">•</span><span class="text-white/50 text-sm leading-relaxed font-body">Събира знание, но не показност. Всичко се документира, но не се показва. Задава се нещо по-голямо...</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 12 -->
+          <div class="accordion-item reveal opacity-0 translate-y-6 bg-dark-800/40 border border-white/[0.06] rounded-xl overflow-hidden hover:border-gold-400/30 transition-all duration-300">
+            <button class="accordion-trigger w-full px-5 py-4 flex items-center justify-between text-left hover:bg-dark-700/30 transition-colors duration-200">
+              <div class="flex items-center gap-4 flex-1">
+                <div class="w-11 h-11 rounded-lg bg-gold-400/10 flex items-center justify-center flex-shrink-0">
+                  <span class="text-gold-400 font-bold text-lg font-body">12</span>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="text-xs text-gold-400 font-semibold tracking-wider uppercase font-body mb-0.5">Норвегия</div>
+                  <div class="text-base md:text-lg font-bold text-white font-display">Изгнанието, самотата, преосмислянето</div>
+                </div>
+              </div>
+              <svg class="accordion-chevron w-5 h-5 text-white/30 flex-shrink-0 ml-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="accordion-content">
+              <div class="px-5 pb-5 pt-1 border-t border-white/[0.04]">
+                <ul class="space-y-2.5 pl-15 md:pl-[60px]">
+                  <li class="flex items-start gap-2.5"><span class="text-gold-400/60 mt-0.5">•</span><span class="text-white/50 text-sm leading-relaxed font-body">Живее в Норвегия в доброволна изолация месеци без приятелства, без романтика, без семейство.</span></li>
+                  <li class="flex items-start gap-2.5"><span class="text-gold-400/60 mt-0.5">•</span><span class="text-white/50 text-sm leading-relaxed font-body">Чете, медитира и изгражда нов вътрешен фундамент.</span></li>
+                  <li class="flex items-start gap-2.5"><span class="text-gold-400/60 mt-0.5">•</span><span class="text-white/50 text-sm leading-relaxed font-body">Поставя началото на дълбока лична трансформация.</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 13 -->
+          <div class="accordion-item reveal opacity-0 translate-y-6 bg-dark-800/40 border border-white/[0.06] rounded-xl overflow-hidden hover:border-gold-400/30 transition-all duration-300">
+            <button class="accordion-trigger w-full px-5 py-4 flex items-center justify-between text-left hover:bg-dark-700/30 transition-colors duration-200">
+              <div class="flex items-center gap-4 flex-1">
+                <div class="w-11 h-11 rounded-lg bg-gold-400/10 flex items-center justify-center flex-shrink-0">
+                  <span class="text-gold-400 font-bold text-lg font-body">13</span>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="text-xs text-gold-400 font-semibold tracking-wider uppercase font-body mb-0.5">Маркетинг, дигитален бизнес</div>
+                  <div class="text-base md:text-lg font-bold text-white font-display">Завръщането</div>
+                </div>
+              </div>
+              <svg class="accordion-chevron w-5 h-5 text-white/30 flex-shrink-0 ml-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="accordion-content">
+              <div class="px-5 pb-5 pt-1 border-t border-white/[0.04]">
+                <ul class="space-y-2.5 pl-15 md:pl-[60px]">
+                  <li class="flex items-start gap-2.5"><span class="text-gold-400/60 mt-0.5">•</span><span class="text-white/50 text-sm leading-relaxed font-body">Развива дигитални умения в маркетинга и започва работа с клиенти по целия свят.</span></li>
+                  <li class="flex items-start gap-2.5"><span class="text-gold-400/60 mt-0.5">•</span><span class="text-white/50 text-sm leading-relaxed font-body">Създава нови структури, услуги и онлайн бизнеси.</span></li>
+                  <li class="flex items-start gap-2.5"><span class="text-gold-400/60 mt-0.5">•</span><span class="text-white/50 text-sm leading-relaxed font-body">Възстановява репутацията си и създава нова стабилна финансова основа.</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 14 -->
+          <div class="accordion-item reveal opacity-0 translate-y-6 bg-dark-800/40 border border-white/[0.06] rounded-xl overflow-hidden hover:border-gold-400/30 transition-all duration-300">
+            <button class="accordion-trigger w-full px-5 py-4 flex items-center justify-between text-left hover:bg-dark-700/30 transition-colors duration-200">
+              <div class="flex items-center gap-4 flex-1">
+                <div class="w-11 h-11 rounded-lg bg-gold-400/10 flex items-center justify-center flex-shrink-0">
+                  <span class="text-gold-400 font-bold text-lg font-body">14</span>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="text-xs text-gold-400 font-semibold tracking-wider uppercase font-body mb-0.5">Такси, брокер, нула</div>
+                  <div class="text-base md:text-lg font-bold text-white font-display">Тъмният период</div>
+                </div>
+              </div>
+              <svg class="accordion-chevron w-5 h-5 text-white/30 flex-shrink-0 ml-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="accordion-content">
+              <div class="px-5 pb-5 pt-1 border-t border-white/[0.04]">
+                <ul class="space-y-2.5 pl-15 md:pl-[60px]">
+                  <li class="flex items-start gap-2.5"><span class="text-gold-400/60 mt-0.5">•</span><span class="text-white/50 text-sm leading-relaxed font-body">След PR атаките работи каквото намери, включително във фабрики, таксиметров шофьор и брокер на имоти.</span></li>
+                  <li class="flex items-start gap-2.5"><span class="text-gold-400/60 mt-0.5">•</span><span class="text-white/50 text-sm leading-relaxed font-body">Преминава през тежки години, които оформят стоманена идентичност.</span></li>
+                  <li class="flex items-start gap-2.5"><span class="text-gold-400/60 mt-0.5">•</span><span class="text-white/50 text-sm leading-relaxed font-body">Този период става фундаменталната школа на неговия характер.</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 15 — Final (gold highlight) -->
+          <div class="accordion-item reveal opacity-0 translate-y-6 bg-dark-800/60 border border-gold-400/20 rounded-xl overflow-hidden hover:border-gold-400/40 transition-all duration-300">
+            <button class="accordion-trigger w-full px-5 py-4 flex items-center justify-between text-left hover:bg-dark-700/30 transition-colors duration-200">
+              <div class="flex items-center gap-4 flex-1">
+                <div class="w-11 h-11 rounded-lg bg-gold-400/20 flex items-center justify-center flex-shrink-0 ring-2 ring-gold-400/10">
+                  <span class="text-gold-400 font-bold text-lg font-body">15</span>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="text-xs text-gold-400 font-semibold tracking-wider uppercase font-body mb-0.5">КОД: ИЗОБИЛИЕ™</div>
+                  <div class="text-base md:text-lg font-bold text-gold-400 font-display">Системата, философията, новият Шон Иса</div>
+                </div>
+              </div>
+              <svg class="accordion-chevron w-5 h-5 text-gold-400/50 flex-shrink-0 ml-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="accordion-content">
+              <div class="px-5 pb-5 pt-1 border-t border-gold-400/10">
+                <ul class="space-y-2.5 pl-15 md:pl-[60px]">
+                  <li class="flex items-start gap-2.5"><span class="text-gold-400/60 mt-0.5">•</span><span class="text-white/50 text-sm leading-relaxed font-body">Създава собствена философия за успех, лидерство и растеж.</span></li>
+                  <li class="flex items-start gap-2.5"><span class="text-gold-400/60 mt-0.5">•</span><span class="text-white/50 text-sm leading-relaxed font-body">Изгражда общност, обучава хора в бизнес, финанси, личен бранд и дигитални умения.</span></li>
+                  <li class="flex items-start gap-2.5"><span class="text-gold-400/60 mt-0.5">•</span><span class="text-white/50 text-sm leading-relaxed font-body">Влиза в най-силния си период, с мисия да остави глобално наследство.</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- CTA -->
+        <div class="text-center mt-12">
+          <a href="#cta" class="magnetic-btn inline-flex items-center gap-3 px-8 py-4 bg-gold-400 text-dark-900 text-sm font-bold tracking-[0.12em] uppercase rounded-sm hover:bg-gold-300 transition-colors duration-300 animate-pulse-gold">
+            Виж каква система изградих от всичко това
+            <span class="text-base leading-none">&rarr;</span>
+          </a>
+        </div>
+
       </div>
-    </div>
-
-    <!-- ─── Item 2 · RIGHT ─── -->
-    <div class="timeline-item opacity-0 translate-y-8 relative pl-16 lg:pl-12 lg:w-1/2 lg:ml-auto mb-16">
-      <!-- Dot -->
-      <div class="absolute left-4 lg:left-[-8px] top-1 w-3.5 h-3.5 rounded-full border-2 border-gold-400/50 bg-dark-900 z-10"></div>
-      <!-- Content -->
-      <span class="text-gold-400/70 text-[11px] tracking-[0.2em] uppercase font-bold font-body">Година: 10</span>
-      <h3 class="font-display text-xl lg:text-2xl font-bold mt-1.5">Пробуждането</h3>
-      <p class="text-white/40 text-sm mt-2 leading-relaxed font-body">
-        YouTube. &ldquo;The Secret&rdquo;. Наполеон Хил. Кийосаки. Карнеги.
-        На 10 години откривам личностното развитие и финансовата свобода.
-      </p>
-      <button class="lesson-toggle text-gold-400/50 hover:text-gold-400 text-xs tracking-wider uppercase mt-3 transition-colors duration-300 cursor-pointer font-body">Научен урок &darr;</button>
-      <div class="lesson-content max-h-0 overflow-hidden transition-all duration-300">
-        <p class="text-white/25 text-sm mt-2 italic border-l-2 border-gold-400/15 pl-3 font-body">
-          Ако не контролираш ума си, някой друг ще го направи.
-        </p>
-      </div>
-    </div>
-
-    <!-- ─── Item 3 · LEFT ─── -->
-    <div class="timeline-item opacity-0 translate-y-8 relative pl-16 lg:pl-0 lg:w-1/2 lg:pr-12 mb-16">
-      <!-- Dot -->
-      <div class="absolute left-4 lg:left-auto lg:right-[-8px] top-1 w-3.5 h-3.5 rounded-full border-2 border-gold-400/50 bg-dark-900 z-10"></div>
-      <!-- Content -->
-      <span class="text-gold-400/70 text-[11px] tracking-[0.2em] uppercase font-bold font-body">Година: Тийн години</span>
-      <h3 class="font-display text-xl lg:text-2xl font-bold mt-1.5">Първият Hustle</h3>
-      <p class="text-white/40 text-sm mt-2 leading-relaxed font-body">
-        Продавам собственото си колело, за да стартирам първия бизнес.
-        Купувам и препродавам стоки онлайн.
-      </p>
-      <button class="lesson-toggle text-gold-400/50 hover:text-gold-400 text-xs tracking-wider uppercase mt-3 transition-colors duration-300 cursor-pointer font-body">Научен урок &darr;</button>
-      <div class="lesson-content max-h-0 overflow-hidden transition-all duration-300">
-        <p class="text-white/25 text-sm mt-2 italic border-l-2 border-gold-400/15 pl-3 font-body">
-          Амбиция + Действие = Резултат. Теорията без действие е хоби.
-        </p>
-      </div>
-    </div>
-
-    <!-- ─── Item 4 · RIGHT ─── -->
-    <div class="timeline-item opacity-0 translate-y-8 relative pl-16 lg:pl-12 lg:w-1/2 lg:ml-auto mb-16">
-      <!-- Dot -->
-      <div class="absolute left-4 lg:left-[-8px] top-1 w-3.5 h-3.5 rounded-full border-2 border-gold-400/50 bg-dark-900 z-10"></div>
-      <!-- Content -->
-      <span class="text-gold-400/70 text-[11px] tracking-[0.2em] uppercase font-bold font-body">Година: Следващите години</span>
-      <h3 class="font-display text-xl lg:text-2xl font-bold mt-1.5">Улицата като университет</h3>
-      <p class="text-white/40 text-sm mt-2 leading-relaxed font-body">
-        Предизвикателство: 10&nbsp;000 продажби на непознати. Моловете и улиците
-        на София &mdash; школа по психология и въздействие.
-      </p>
-      <button class="lesson-toggle text-gold-400/50 hover:text-gold-400 text-xs tracking-wider uppercase mt-3 transition-colors duration-300 cursor-pointer font-body">Научен урок &darr;</button>
-      <div class="lesson-content max-h-0 overflow-hidden transition-all duration-300">
-        <p class="text-white/25 text-sm mt-2 italic border-l-2 border-gold-400/15 pl-3 font-body">
-          Страхът от отхвърляне е най-скъпият данък, който плащаш.
-        </p>
-      </div>
-    </div>
-
-    <!-- ─── Item 5 · LEFT ─── -->
-    <div class="timeline-item opacity-0 translate-y-8 relative pl-16 lg:pl-0 lg:w-1/2 lg:pr-12 mb-16">
-      <!-- Dot -->
-      <div class="absolute left-4 lg:left-auto lg:right-[-8px] top-1 w-3.5 h-3.5 rounded-full border-2 border-gold-400/50 bg-dark-900 z-10"></div>
-      <!-- Content -->
-      <span class="text-gold-400/70 text-[11px] tracking-[0.2em] uppercase font-bold font-body">Година: Младост</span>
-      <h3 class="font-display text-xl lg:text-2xl font-bold mt-1.5">Мащаб и лидерство</h3>
-      <p class="text-white/40 text-sm mt-2 leading-relaxed font-body">
-        Над 100-членен екип в компании за директни продажби. Козметика,
-        добавки, търговски мрежи.
-      </p>
-      <button class="lesson-toggle text-gold-400/50 hover:text-gold-400 text-xs tracking-wider uppercase mt-3 transition-colors duration-300 cursor-pointer font-body">Научен урок &darr;</button>
-      <div class="lesson-content max-h-0 overflow-hidden transition-all duration-300">
-        <p class="text-white/25 text-sm mt-2 italic border-l-2 border-gold-400/15 pl-3 font-body">
-          Системите мащабират. Хората изпълняват. Лидерството насочва.
-        </p>
-      </div>
-    </div>
-
-    <!-- ─── Item 6 · RIGHT ─── -->
-    <div class="timeline-item opacity-0 translate-y-8 relative pl-16 lg:pl-12 lg:w-1/2 lg:ml-auto mb-16">
-      <!-- Dot -->
-      <div class="absolute left-4 lg:left-[-8px] top-1 w-3.5 h-3.5 rounded-full border-2 border-gold-400/50 bg-dark-900 z-10"></div>
-      <!-- Content -->
-      <span class="text-gold-400/70 text-[11px] tracking-[0.2em] uppercase font-bold font-body">Година: 2019</span>
-      <h3 class="font-display text-xl lg:text-2xl font-bold mt-1.5">Национален отбор &mdash; исторически обрат</h3>
-      <p class="text-white/40 text-sm mt-2 leading-relaxed font-body">
-        От новак на пързалката до професионален хокеист за България. Златен
-        медал срещу Израел. &ldquo;Best Player of the Game&rdquo;. Първо злато
-        за националния отбор в дивизията.
-      </p>
-      <button class="lesson-toggle text-gold-400/50 hover:text-gold-400 text-xs tracking-wider uppercase mt-3 transition-colors duration-300 cursor-pointer font-body">Научен урок &darr;</button>
-      <div class="lesson-content max-h-0 overflow-hidden transition-all duration-300">
-        <p class="text-white/25 text-sm mt-2 italic border-l-2 border-gold-400/15 pl-3 font-body">
-          Войнският манталитет побеждава таланта, когато талантът не работи.
-        </p>
-      </div>
-    </div>
-
-    <!-- ─── Item 7 · LEFT ─── -->
-    <div class="timeline-item opacity-0 translate-y-8 relative pl-16 lg:pl-0 lg:w-1/2 lg:pr-12 mb-16">
-      <!-- Dot -->
-      <div class="absolute left-4 lg:left-auto lg:right-[-8px] top-1 w-3.5 h-3.5 rounded-full border-2 border-gold-400/50 bg-dark-900 z-10"></div>
-      <!-- Content -->
-      <span class="text-gold-400/70 text-[11px] tracking-[0.2em] uppercase font-bold font-body">Година: Крипто ерата</span>
-      <h3 class="font-display text-xl lg:text-2xl font-bold mt-1.5">Бързи пари, бързи загуби</h3>
-      <p class="text-white/40 text-sm mt-2 leading-relaxed font-body">
-        Печалби: Спортни коли, луксозен живот в Дубай. Загуби: Некачествени
-        инвестиции, PR атаки, негативна кампания.
-      </p>
-      <button class="lesson-toggle text-gold-400/50 hover:text-gold-400 text-xs tracking-wider uppercase mt-3 transition-colors duration-300 cursor-pointer font-body">Научен урок &darr;</button>
-      <div class="lesson-content max-h-0 overflow-hidden transition-all duration-300">
-        <p class="text-white/25 text-sm mt-2 italic border-l-2 border-gold-400/15 pl-3 font-body">
-          Парите без система са временни. Репутацията без ценности е крехка.
-        </p>
-      </div>
-    </div>
-
-    <!-- ─── Item 8 · RIGHT ─── -->
-    <div class="timeline-item opacity-0 translate-y-8 relative pl-16 lg:pl-12 lg:w-1/2 lg:ml-auto mb-16">
-      <!-- Dot -->
-      <div class="absolute left-4 lg:left-[-8px] top-1 w-3.5 h-3.5 rounded-full border-2 border-gold-400/50 bg-dark-900 z-10"></div>
-      <!-- Content -->
-      <span class="text-gold-400/70 text-[11px] tracking-[0.2em] uppercase font-bold font-body">Година: CBD бизнес</span>
-      <h3 class="font-display text-xl lg:text-2xl font-bold mt-1.5">Международен обхват, пазарен урок</h3>
-      <p class="text-white/40 text-sm mt-2 leading-relaxed font-body">
-        Бизнес в 8 държави. Инфлуенсъри, яхти, луксозни събития. Продуктът
-        беше добър. Пазарът &mdash; недооценен. Минус шестцифрени суми. Задължения.
-      </p>
-      <button class="lesson-toggle text-gold-400/50 hover:text-gold-400 text-xs tracking-wider uppercase mt-3 transition-colors duration-300 cursor-pointer font-body">Научен урок &darr;</button>
-      <div class="lesson-content max-h-0 overflow-hidden transition-all duration-300">
-        <p class="text-white/25 text-sm mt-2 italic border-l-2 border-gold-400/15 pl-3 font-body">
-          Не всичко, което блести, е бизнес. Продуктът &ne; пазар.
-        </p>
-      </div>
-    </div>
-
-    <!-- ─── Item 9 · LEFT ─── -->
-    <div class="timeline-item opacity-0 translate-y-8 relative pl-16 lg:pl-0 lg:w-1/2 lg:pr-12 mb-16">
-      <!-- Dot -->
-      <div class="absolute left-4 lg:left-auto lg:right-[-8px] top-1 w-3.5 h-3.5 rounded-full border-2 border-gold-400/50 bg-dark-900 z-10"></div>
-      <!-- Content -->
-      <span class="text-gold-400/70 text-[11px] tracking-[0.2em] uppercase font-bold font-body">Година: Тъмният период</span>
-      <h3 class="font-display text-xl lg:text-2xl font-bold mt-1.5">От дъното</h3>
-      <p class="text-white/40 text-sm mt-2 leading-relaxed font-body">
-        Работа във фабрики. Такси шофьор. Брокер на имоти. Тежки години.
-        Самота. Преосмисляне.
-      </p>
-      <button class="lesson-toggle text-gold-400/50 hover:text-gold-400 text-xs tracking-wider uppercase mt-3 transition-colors duration-300 cursor-pointer font-body">Научен урок &darr;</button>
-      <div class="lesson-content max-h-0 overflow-hidden transition-all duration-300">
-        <p class="text-white/25 text-sm mt-2 italic border-l-2 border-gold-400/15 pl-3 font-body">
-          Дъното не те убива. Те кове. Там се ражда истинският характер.
-        </p>
-      </div>
-    </div>
-
-    <!-- ─── Item 10 · RIGHT ─── -->
-    <div class="timeline-item opacity-0 translate-y-8 relative pl-16 lg:pl-12 lg:w-1/2 lg:ml-auto mb-16">
-      <!-- Dot -->
-      <div class="absolute left-4 lg:left-[-8px] top-1 w-3.5 h-3.5 rounded-full border-2 border-gold-400/50 bg-dark-900 z-10"></div>
-      <!-- Content -->
-      <span class="text-gold-400/70 text-[11px] tracking-[0.2em] uppercase font-bold font-body">Година: Норвегия</span>
-      <h3 class="font-display text-xl lg:text-2xl font-bold mt-1.5">Изгнанието като школа</h3>
-      <p class="text-white/40 text-sm mt-2 leading-relaxed font-body">
-        Доброволна изолация. Месеци без приятелства, романтика, семейство.
-        Четене. Медитация. Нов вътрешен фундамент.
-      </p>
-      <button class="lesson-toggle text-gold-400/50 hover:text-gold-400 text-xs tracking-wider uppercase mt-3 transition-colors duration-300 cursor-pointer font-body">Научен урок &darr;</button>
-      <div class="lesson-content max-h-0 overflow-hidden transition-all duration-300">
-        <p class="text-white/25 text-sm mt-2 italic border-l-2 border-gold-400/15 pl-3 font-body">
-          Понякога трябва да изчезнеш, за да се появиш отново.
-        </p>
-      </div>
-    </div>
-
-    <!-- ─── Item 11 · LEFT ─── -->
-    <div class="timeline-item opacity-0 translate-y-8 relative pl-16 lg:pl-0 lg:w-1/2 lg:pr-12 mb-16">
-      <!-- Dot -->
-      <div class="absolute left-4 lg:left-auto lg:right-[-8px] top-1 w-3.5 h-3.5 rounded-full border-2 border-gold-400/50 bg-dark-900 z-10"></div>
-      <!-- Content -->
-      <span class="text-gold-400/70 text-[11px] tracking-[0.2em] uppercase font-bold font-body">Година: Завръщането</span>
-      <h3 class="font-display text-xl lg:text-2xl font-bold mt-1.5">Дигитално възраждане</h3>
-      <p class="text-white/40 text-sm mt-2 leading-relaxed font-body">
-        Маркетинг умения. Клиенти по целия свят. Нови структури. Възстановена
-        репутация. Нова финансова основа.
-      </p>
-      <button class="lesson-toggle text-gold-400/50 hover:text-gold-400 text-xs tracking-wider uppercase mt-3 transition-colors duration-300 cursor-pointer font-body">Научен урок &darr;</button>
-      <div class="lesson-content max-h-0 overflow-hidden transition-all duration-300">
-        <p class="text-white/25 text-sm mt-2 italic border-l-2 border-gold-400/15 pl-3 font-body">
-          Уменията остават. Можеш да започнеш отново &mdash; по-мъдър.
-        </p>
-      </div>
-    </div>
-
-    <!-- ─── Item 12 · RIGHT · SPECIAL (gold-tinted) ─── -->
-    <div class="timeline-item opacity-0 translate-y-8 relative pl-16 lg:pl-12 lg:w-1/2 lg:ml-auto mb-16">
-      <!-- Dot — gold-tinted with ring -->
-      <div class="absolute left-4 lg:left-[-8px] top-1 w-3.5 h-3.5 rounded-full border-2 border-gold-400 bg-gold-400/20 ring-4 ring-gold-400/10 z-10"></div>
-      <!-- Content -->
-      <span class="text-gold-400/70 text-[11px] tracking-[0.2em] uppercase font-bold font-body">Година: Днес</span>
-      <h3 class="font-display text-xl lg:text-2xl font-bold mt-1.5 text-gold-400">CODE: ABUNDANCE&trade; &mdash; Системата</h3>
-      <p class="text-white/40 text-sm mt-2 leading-relaxed font-body">
-        Собствена философия за успех, лидерство и растеж. Общност. Обучения в
-        бизнес, финанси, личен бранд. Най-силният период. Мисия за глобално
-        наследство.
-      </p>
-      <button class="lesson-toggle text-gold-400/50 hover:text-gold-400 text-xs tracking-wider uppercase mt-3 transition-colors duration-300 cursor-pointer font-body">Научен урок &darr;</button>
-      <div class="lesson-content max-h-0 overflow-hidden transition-all duration-300">
-        <p class="text-white/25 text-sm mt-2 italic border-l-2 border-gold-400/15 pl-3 font-body">
-          Цялото ти минало е подготовка за момента, който идва.
-        </p>
-      </div>
-    </div>
-
-  </div><!-- /timeline container -->
-
-  <!-- Closing statement -->
-  <div class="max-w-3xl mx-auto px-6 lg:px-8 text-center mt-20">
-    <p class="font-display text-lg lg:text-xl italic text-white/30 leading-relaxed">
-      Това не е разказ за успеха. Това е разказ за това как успехът се
-      гради &mdash; един провал след друг, докато провалите станат стъпала.
-    </p>
-
-    <!-- CTA -->
-    <a href="#projects"
-       class="magnetic-btn inline-flex items-center gap-3 mt-10 px-8 py-4 bg-gold-400 text-dark-900 text-sm font-bold tracking-[0.12em] uppercase rounded-sm hover:bg-gold-300 transition-colors duration-300 font-body">
-      Виж каква система изградих от всичко това
-      <span class="text-base leading-none">&rarr;</span>
-    </a>
-  </div>
-
-</div>
     </section>
+
 
     <!-- ═══ PROJECTS ═══ -->
     <section id="projects">

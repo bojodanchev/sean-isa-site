@@ -92,20 +92,26 @@ function initScrollReveal() {
   );
 
   document
-    .querySelectorAll(".timeline-item, .reveal")
+    .querySelectorAll(".reveal")
     .forEach((el) => observer.observe(el));
 }
 
 // ═══════════════════════════════════════════
-// Timeline — collapsible lessons
+// Founder Accordion
 // ═══════════════════════════════════════════
-function initLessonToggles() {
-  document.querySelectorAll(".lesson-toggle").forEach((btn) => {
+function initFounderAccordion() {
+  document.querySelectorAll(".accordion-trigger").forEach((btn) => {
     btn.addEventListener("click", () => {
-      const content = btn.nextElementSibling as HTMLElement;
+      const item = btn.closest(".accordion-item");
+      if (!item) return;
+      const content = item.querySelector(".accordion-content") as HTMLElement;
+      const chevron = btn.querySelector(".accordion-chevron") as HTMLElement;
       if (!content) return;
+
       const isOpen = content.classList.toggle("open");
-      btn.textContent = isOpen ? "Скрий урока \u2191" : "Научен урок \u2193";
+      if (chevron) {
+        chevron.style.transform = isOpen ? "rotate(180deg)" : "";
+      }
     });
   });
 }
@@ -208,7 +214,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initSmoothScroll();
   initHeroAnimation();
   initScrollReveal();
-  initLessonToggles();
+  initFounderAccordion();
   initCountUp();
   initTestimonialCarousel();
   initMagneticButtons();

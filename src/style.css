@@ -115,20 +115,23 @@ body::after {
 }
 
 /* ═══════════════════════════════════════════
-   Timeline
+   Founder Accordion
    ═══════════════════════════════════════════ */
 
-.timeline-item {
-  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
-              transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
-.timeline-item.visible {
-  opacity: 1 !important;
-  transform: translateY(0) !important;
+.accordion-content.open {
+  max-height: 600px;
 }
-
-.lesson-content.open {
-  max-height: 200px;
+.accordion-chevron {
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.accordion-content.open ~ .accordion-trigger .accordion-chevron,
+.accordion-item.open .accordion-chevron {
+  transform: rotate(180deg);
 }
 
 /* ═══════════════════════════════════════════

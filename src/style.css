@@ -135,6 +135,16 @@ body::after {
 }
 
 /* ═══════════════════════════════════════════
+   Section dividers — subtle top border
+   ═══════════════════════════════════════════ */
+
+#projects,
+#philosophy,
+#proof {
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* ═══════════════════════════════════════════
    Project cards — gold edge glow on hover
    ═══════════════════════════════════════════ */
 

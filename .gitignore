@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+.vercel
+
+# Screenshots from QA/design sessions
+*.png
+!public/**/*.png

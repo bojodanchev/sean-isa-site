@@ -149,34 +149,6 @@ function initCountUp() {
   document.querySelectorAll(".count-up").forEach((el) => observer.observe(el));
 }
 
-// ═══════════════════════════════════════════
-// Testimonial Carousel
-// ═══════════════════════════════════════════
-function initTestimonialCarousel() {
-  const track = document.getElementById("testimonial-track");
-  const dots = document.querySelectorAll(".testimonial-dot");
-  if (!track || dots.length === 0) return;
-
-  let current = 0;
-  const total = dots.length;
-
-  function goTo(index: number) {
-    current = index;
-    track!.style.transform = `translateX(-${current * 100}%)`;
-    dots.forEach((dot, i) => {
-      dot.classList.toggle("bg-gold-400", i === current);
-      dot.classList.toggle("bg-white/20", i !== current);
-    });
-  }
-
-  dots.forEach((dot) => {
-    dot.addEventListener("click", () => {
-      goTo(parseInt((dot as HTMLElement).dataset.index || "0", 10));
-    });
-  });
-
-  setInterval(() => goTo((current + 1) % total), 5000);
-}
 
 // ═══════════════════════════════════════════
 // Magnetic Buttons
@@ -216,6 +188,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initScrollReveal();
   initFounderAccordion();
   initCountUp();
-  initTestimonialCarousel();
   initMagneticButtons();
 });

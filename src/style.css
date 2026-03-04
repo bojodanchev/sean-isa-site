@@ -178,6 +178,24 @@ body::after {
    Section Dividers — Vertical centered line
    ═══════════════════════════════════════════ */
 
+/* ═══════════════════════════════════════════
+   Company Logos — monochrome strip
+   ═══════════════════════════════════════════ */
+
+.company-logo {
+  opacity: 0.35;
+  filter: grayscale(1) brightness(0.9);
+  transition: opacity 0.5s ease, filter 0.5s ease;
+}
+.company-logo:hover {
+  opacity: 0.75;
+  filter: grayscale(0) brightness(1);
+}
+
+/* ═══════════════════════════════════════════
+   Section Dividers — Vertical centered line
+   ═══════════════════════════════════════════ */
+
 .section-divider {
   width: 1px;
   height: 80px;

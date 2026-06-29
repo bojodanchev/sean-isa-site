@@ -1,76 +1,51 @@
-# Project: Sean Isa Portfolio
+# Project: Sean Isa Private Executive Proposal
 
-Premium dark-mode personal portfolio site for Sean Isa. Bulgarian language. Single-page static site. (Vite 7 + Tailwind CSS v4 + vanilla TypeScript)
+Private, password-protected executive operations proposal site for Sean Isa. Bulgarian-first single-page Vite app with an in-page BG/EN language toggle and Vercel Routing Middleware for server-side access control.
 
 ## Quick Start
 ```bash
 npm install
-npm run dev        # Dev server with hot reload
-npm run build      # tsc + vite build → dist/
+npm run dev
+npm run build
 ```
 
 ## Key Commands
 | Command | Purpose |
 |---------|---------|
-| `npm run dev` | Vite dev server |
-| `npm run build` | Typecheck + production build |
-| `npm run preview` | Preview production build |
-| `git push origin main` | Auto-deploys to Vercel |
-
-## Project Structure
-```
-index.html              # Entire site — all 8 sections (~1200 lines)
-src/main.ts             # All JS interactivity (accordion, carousel, scroll, nav)
-src/style.css           # @theme design tokens + custom CSS
-src/partials/           # Original section partials (now merged into index.html)
-public/sean-portrait.jpg # Founder portrait
-docs/                   # Architecture, environment, gotchas, decisions
-```
+| `npm run dev` | Start Vite dev server |
+| `npm run build` | Typecheck + production Vite build |
+| `npm run preview` | Preview the production build locally |
+| `npx vercel build --prod` | Validate Vercel output locally after `vercel pull --yes` |
+| `npx vercel deploy --prod --yes` | Deploy production |
 
 ## Architecture Pointers
 > Deep dive: [docs/architecture.md](docs/architecture.md)
 
-- **Tailwind v4**: Design tokens in `src/style.css` via `@theme { }` — NOT in a config file
-- **Dark + Gold palette**: `dark-950`→`dark-400` layered depth, `gold-400` (#d4af37) primary accent
-- **Fonts**: `font-display` = Cormorant Garamond (serif), `font-body` = Outfit (sans)
-- **Scroll animations**: `.reveal` + `.visible` via IntersectionObserver in main.ts
-- **All content is Bulgarian**: Hardcoded strings, no i18n system
+- `index.html` contains the private proposal page and all PRD sections.
+- `src/main.ts` handles scroll progress, reveal animation, smooth anchors, and BG/EN text swapping.
+- `src/style.css` owns the executive minimalism visual system.
+- `middleware.ts` protects all routes server-side on Vercel.
+- `archive/current-site-2026-06-29/` is the restorable archive of the previous public portfolio.
 
 ## Environment & Deployment
 > Details: [docs/environment.md](docs/environment.md)
 
-- **Vercel**: `sean-isa-site.vercel.app` — auto-deploys on push to `main`
-- **No env vars needed** — fully static site
-- **No `base` in vite.config.ts** — Vercel serves from root
+- Production domain: `https://www.seanisa.com`.
+- Apex `https://seanisa.com` redirects to `www`.
+- Required Vercel production env var: `PROPOSAL_PASSWORD`.
+- The password placeholder may say `october 1993`, but the secret must come from Vercel env, not client HTML.
+- Keep `public/robots.txt`, meta robots, and middleware `X-Robots-Tag` aligned for private/noindex behavior.
 
-## Rules & Style
-- Every `<section>` needs `py-24 lg:py-32` minimum (enterprise spacing)
-- Hero needs `pt-28 pb-40 lg:pt-32 lg:pb-36` to clear fixed nav + absolute stats bar
-- Use `.reveal` class on any element that should animate on scroll
-- Accordion items use `.accordion-trigger` / `.accordion-content` / `.accordion-chevron`
-- CTA buttons use `.magnetic-btn` + `.animate-pulse-gold`
-
-## Gotchas (Top 5)
+## Gotchas
 > Full list: [docs/gotchas.md](docs/gotchas.md)
 
-- Fixed nav is h-20 — all hero content needs pt-28+ to avoid overlap
-- Hero bottom stats bar is absolute — content needs pb-40+ to clear it
-- Vercel link needs `--project sean-isa-site` (directory name has a space)
-- Tailwind v4 uses `@theme` in CSS, not `tailwind.config.ts`
-- Journey accordion ported from Abundance project at `/Users/bojodanchev/Abundance/Archive/`
+- `npm run dev` does not exercise Vercel middleware; validate auth through Vercel deployment or Vercel output.
+- `vercel env add` can accidentally store extra characters if input includes a newline or shell quoting issue. Verify by pulling env and checking parsed length/equality, without printing the secret.
+- `vercel build --prod` requires `.vercel/project.json` from `npx vercel pull --yes`.
+- The protected app HTML must not contain the password placeholder; the login page can.
 
 ## Recent Decisions
 > History: [docs/decisions/](docs/decisions/)
 
-- [2026-03-01] Removed GitHub Actions CI/CD — Vercel handles deployment natively
-- [2026-03-01] Ported 15-item Founder Story accordion from Abundance SPA (replacing old 12-item timeline)
-
-## Active Context
-Enterprise spacing pass complete. All sections have proper padding. Accordion and all 8 sections are live at `sean-isa-site.vercel.app`.
-
-## Discovery Log (Recent)
-> Full log: [docs/discovery-log.md](docs/discovery-log.md)
-
-- [2026-03-01] Enterprise spacing: added py-24+ to all sections, section dividers, footer padding increase
-- [2026-03-01] Ported 15-item founder accordion from Abundance SPA with bio card + portrait
-- [2026-03-01] Fixed hero overlap (nav badge + CTA/stats bar collision)
+- [2026-06-29] Replaced public portfolio with private executive operations proposal and archived the previous site.
+- [2026-06-29] Added Vercel server-side password protection with `PROPOSAL_PASSWORD`.

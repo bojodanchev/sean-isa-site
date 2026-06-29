@@ -2,6 +2,28 @@
 
 Reverse-chronological. Most recent first.
 
+## [2026-06-29] Private executive proposal shipped to production
+**Context**: User asked to preserve the current `seanisa.com` site, fully implement `New version prd.md`, push to production, and validate.
+**Learnings**:
+- The previous public portfolio was archived at `archive/current-site-2026-06-29/` before replacing active source.
+- Active source is now a private executive operations proposal, not a portfolio. Old `src/partials/*` are archive-only.
+- `middleware.ts` uses Vercel Routing Middleware and `@vercel/functions` `next()` to protect the static Vite output server-side.
+- Required production env var is `PROPOSAL_PASSWORD`; if absent, middleware returns `503` rather than exposing the page.
+- Production env input initially contained extra characters and rejected the intended password. Re-adding with `printf 'october 1993' | npx vercel env add PROPOSAL_PASSWORD production` fixed it.
+- Live validation confirmed unauthenticated `401`, login `303`, `HttpOnly; Secure; SameSite=Lax` cookie, authenticated `200`, no login placeholder in protected app HTML, and `X-Robots-Tag` noindex headers.
+**Files touched**: `index.html`, `src/main.ts`, `src/style.css`, `middleware.ts`, `public/robots.txt`, `public/favicon.svg`, `archive/current-site-2026-06-29/`, `package.json`, `package-lock.json`
+
+## [2026-06-29] PRD implementation validation details
+**Context**: Browser and build validation after replacing the public portfolio with the proposal page.
+**Learnings**:
+- `npm run build` and direct middleware type-check both passed. Direct middleware type-check command: `npx tsc --noEmit --target ES2022 --module ESNext --moduleResolution bundler --lib ES2022,DOM --strict --skipLibCheck middleware.ts`.
+- `npx vercel build --prod` only worked after `npx vercel pull --yes` downloaded project settings.
+- Vite local dev confirmed visual/client behavior but could not validate middleware auth.
+- Playwright runtime checks verified BG/EN toggle, no horizontal overflow, no outbound links, noindex meta, and absence of the password placeholder from protected app HTML.
+- Mobile QA caught that image-first ordering hid the proposal headline below the first viewport; copy-first mobile ordering fixed it.
+- Desktop QA caught that the first hero headline size clipped in the split layout; reducing the clamp max fixed first-viewport readability.
+**Files touched**: `index.html`, `src/main.ts`, `src/style.css`, `middleware.ts`
+
 ## [2026-03-01] Enterprise spacing pass
 **Context**: User reported cramped sections — CTA, footer, and inter-section gaps
 **Learnings**:
